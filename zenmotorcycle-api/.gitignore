@@ -5,3 +5,6 @@ dist/
 .DS_Store
 inventory/architecture.json
 inventory/architecture-summary.json
+.oauth-client.json
+.oauth-tokens.json
+.oauth-*.json

@@ -6,6 +6,7 @@
   "description": "Arquitetura completa Zen Motorcycle — 100% dos endpoints Zendesk OAS (Support, Help Center, Conversations) READ+WRITE",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "oauth": "tsx src/scanner/oauth-bootstrap.ts",
     "scan": "tsx src/scanner/scan-account.ts",
     "coverage": "tsx src/scanner/verify-coverage.ts",
     "probe-writes": "tsx src/scanner/probe-writes.ts",

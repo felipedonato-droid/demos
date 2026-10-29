@@ -12,7 +12,7 @@ const allow = process.env.ZENDESK_ALLOW_WRITES === "1";
 const marker = `cursor-arch-${Date.now()}`;
 
 async function main() {
-  const client = ZendeskClient.fromEnv();
+  const client = await ZendeskClient.fromOAuth();
   console.log(
     `WRITE probe subdomain=${client.http.subdomain} allow=${allow} marker=${marker}`
   );

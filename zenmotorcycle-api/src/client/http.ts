@@ -1,10 +1,10 @@
 /**
- * Zendesk HTTP transport — Basic Auth (email/token) + OAuth bearer.
+ * Zendesk HTTP transport — OAuth Bearer first; Basic only for bootstrap.
  * Implements rate-limit awareness and JSON helpers for ALL products.
  */
 export type AuthConfig =
+  | { type: "oauth"; accessToken: string; refresh?: () => Promise<string> }
   | { type: "apiToken"; email: string; token: string }
-  | { type: "oauth"; accessToken: string }
   | { type: "basic"; email: string; password: string };
 
 export interface ClientOptions {
@@ -43,6 +43,15 @@ export class ZendeskHttp {
     this.userAgent = opts.userAgent ?? "zenmotorcycle-api-architecture/1.0";
   }
 
+  /** Swap access token after refresh without rebuilding clients. */
+  setOAuthAccessToken(accessToken: string) {
+    if (this.auth.type !== "oauth") {
+      this.auth = { type: "oauth", accessToken };
+      return;
+    }
+    this.auth = { ...this.auth, accessToken };
+  }
+
   private authHeader(): string {
     if (this.auth.type === "oauth") return `Bearer ${this.auth.accessToken}`;
     const user =
@@ -64,6 +73,7 @@ export class ZendeskHttp {
       headers?: Record<string, string>;
       rawBody?: BodyInit;
       contentType?: string;
+      _retried?: boolean;
     } = {}
   ): Promise<{ data: T; response: Response }> {
     const url = new URL(
@@ -99,6 +109,16 @@ export class ZendeskHttp {
       } catch {
         data = text;
       }
+    }
+    if (
+      response.status === 401 &&
+      this.auth.type === "oauth" &&
+      this.auth.refresh &&
+      !init._retried
+    ) {
+      const next = await this.auth.refresh();
+      this.setOAuthAccessToken(next);
+      return this.request<T>(method, path, { ...init, _retried: true });
     }
     if (!response.ok) {
       throw new ZendeskHttpError(

@@ -63,7 +63,23 @@ Fontes: [API Reference](https://developer.zendesk.com/api-reference/) · [Docume
               zenmotorcycle.zendesk.com/api/v2
 ```
 
-## Autenticação admin
+## Autenticação admin (OAuth)
+
+Autenticação **somente OAuth Bearer** via grant `client_credentials` no client confidential `cursor-cloud-agent-oauth`.
+
+```bash
+npm run oauth   # troca client_id/secret por access_token (arquivos gitignored)
+npm run scan    # varredura live
+ZENDESK_ALLOW_WRITES=1 npm run probe-writes
+```
+
+Arquivos locais (nunca commitados): `.oauth-client.json`, `.oauth-tokens.json`.
+
+Refresh automático: em HTTP 401 o client renova via `client_credentials`.
+
+Snapshot live redigido: `inventory/architecture-public.json`.
+
+## Autenticação admin (legado)
 
 Basic Auth Zendesk API token:
 

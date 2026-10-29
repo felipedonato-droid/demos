@@ -117,9 +117,9 @@ const ARCHITECTURE_READS: Array<{ operationId: string; path: string; tag: string
 ];
 
 async function main() {
-  const client = ZendeskClient.fromEnv();
+  const client = await ZendeskClient.fromOAuth();
   console.log(
-    `Scanning ${client.http.subdomain}.zendesk.com as admin — catalog ${ZendeskClient.ENDPOINT_COUNT} endpoints (R=${ZendeskClient.READ_COUNT} W=${ZendeskClient.WRITE_COUNT})`
+    `Scanning ${client.http.subdomain}.zendesk.com via OAuth — catalog ${ZendeskClient.ENDPOINT_COUNT} endpoints (R=${ZendeskClient.READ_COUNT} W=${ZendeskClient.WRITE_COUNT})`
   );
 
   const me = await safeGet(client, "ShowMe", "/api/v2/users/me.json", "Users");
