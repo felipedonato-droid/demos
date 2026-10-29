@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.env
+*.log
+.DS_Store
+inventory/architecture.json
+inventory/architecture-summary.json

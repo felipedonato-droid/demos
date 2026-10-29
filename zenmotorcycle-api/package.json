@@ -1,0 +1,23 @@
+{
+  "name": "zenmotorcycle-api-architecture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Arquitetura completa Zen Motorcycle — 100% dos endpoints Zendesk OAS (Support, Help Center, Conversations) READ+WRITE",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "scan": "tsx src/scanner/scan-account.ts",
+    "coverage": "tsx src/scanner/verify-coverage.ts",
+    "probe-writes": "tsx src/scanner/probe-writes.ts",
+    "codegen": "python3 scripts/generate-client.py",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

@@ -1,0 +1,934 @@
+product,rw,method,path,operationId,tag
+support,READ,GET,/api/v2/{target_type}/{target_id}/relationship_fields/{field_id}/{source_type},GetSourcesByTarget,Lookup Relationships
+support,READ,GET,/api/v2/account/email_settings,GetAccountEmailSettings,Account Settings
+support,WRITE,PUT,/api/v2/account/email_settings,UpdateAccountEmailSettings,Account Settings
+support,READ,GET,/api/v2/account/settings,ShowAccountSettings,Account Settings
+support,WRITE,PUT,/api/v2/account/settings,UpdateAccountSettings,Account Settings
+support,WRITE,POST,/api/v2/accounts,CreateTrialAccount,Reseller
+support,READ,GET,/api/v2/accounts/available,VerifySubdomainAvailability,Reseller
+support,READ,GET,/api/v2/activities,ListActivities,Activity Stream
+support,READ,GET,/api/v2/activities/{activity_id},ShowActivity,Activity Stream
+support,READ,GET,/api/v2/activities/count,CountActivities,Activity Stream
+support,WRITE,POST,/api/v2/any_channel/channelback/report_error,ReportChannelbackError,Channel Framework
+support,WRITE,POST,/api/v2/any_channel/push,PushContentToSupport,Channel Framework
+support,WRITE,POST,/api/v2/any_channel/validate_token,ValidateToken,Channel Framework
+support,READ,GET,/api/v2/api_tokens,ListApiTokens,API Tokens
+support,WRITE,POST,/api/v2/api_tokens,CreateApiToken,API Tokens
+support,WRITE,PUT,/api/v2/api_tokens/{id},UpdateApiToken,API Tokens
+support,WRITE,DELETE,/api/v2/api_tokens/{id},DeleteApiToken,API Tokens
+support,WRITE,POST,/api/v2/approval_clarification_flow_messages,CreateApprovalClarificationFlowMessage,Approval Requests
+support,READ,GET,/api/v2/approval_clarification_flow_messages/{approval_request_id},ShowApprovalClarificationFlowMessages,Approval Requests
+support,READ,GET,/api/v2/approval_requests,ListApprovalRequests,Approval Requests
+support,WRITE,POST,/api/v2/approval_requests,CreateApprovalRequest,Approval Requests
+support,READ,GET,/api/v2/approval_workflow_instances/{workflow_instance_id}/approval_requests/{id},ShowApprovalWorkflowInstanceApprovalRequest,Approval Requests
+support,WRITE,PATCH,/api/v2/approval_workflow_instances/{workflow_instance_id}/approval_requests/{id}/decision,DecideApprovalRequest,Approval Requests
+support,WRITE,PATCH,/api/v2/approval_workflow_instances/{workflow_instance_id}/withdraw,WithdrawApprovalWorkflowInstance,Approval Requests
+support,READ,GET,/api/v2/attachments/{attachment_id},ShowAttachment,Attachments
+support,WRITE,PUT,/api/v2/attachments/{attachment_id},UpdateAttachment,Attachments
+support,WRITE,DELETE,/api/v2/attachments/{attachment_id},DeleteAttachment,Attachments
+support,READ,GET,/api/v2/audit_logs,ListAuditLogs,Audit Logs
+support,READ,GET,/api/v2/audit_logs/{audit_log_id},ShowAuditLog,Audit Logs
+support,WRITE,POST,/api/v2/audit_logs/export,ExportAuditLogs,Audit Logs
+support,READ,GET,/api/v2/autocomplete/tags,AutocompleteTags,Tags
+support,WRITE,POST,/api/v2/autocomplete/tags,AutocompleteTagsPost,Tags
+support,READ,GET,/api/v2/automations,ListAutomations,Automations
+support,WRITE,POST,/api/v2/automations,CreateAutomation,Automations
+support,READ,GET,/api/v2/automations/{automation_id},ShowAutomation,Automations
+support,WRITE,PUT,/api/v2/automations/{automation_id},UpdateAutomation,Automations
+support,WRITE,DELETE,/api/v2/automations/{automation_id},DeleteAutomation,Automations
+support,READ,GET,/api/v2/automations/active,ListActiveAutomations,Automations
+support,WRITE,DELETE,/api/v2/automations/destroy_many,BulkDeleteAutomations,Automations
+support,READ,GET,/api/v2/automations/search,SearchAutomations,Automations
+support,WRITE,PUT,/api/v2/automations/update_many,UpdateManyAutomations,Automations
+support,READ,GET,/api/v2/bookmarks,ListBookmarks,Bookmarks
+support,WRITE,POST,/api/v2/bookmarks,CreateBookmark,Bookmarks
+support,WRITE,DELETE,/api/v2/bookmarks/{bookmark_id},DeleteBookmark,Bookmarks
+support,READ,GET,/api/v2/brand_agents,ListBrandAgents,Brand Agents
+support,WRITE,POST,/api/v2/brand_agents,CreateBrandAgent,Brand Agents
+support,READ,GET,/api/v2/brand_agents/{brand_agent_id},ShowBrandAgentById,Brand Agents
+support,WRITE,DELETE,/api/v2/brand_agents/{brand_agent_id},DeleteBrandAgentById,Brand Agents
+support,READ,GET,/api/v2/brands,ListBrands,Brands
+support,WRITE,POST,/api/v2/brands,CreateBrand,Brands
+support,READ,GET,/api/v2/brands/{brand_id},ShowBrand,Brands
+support,WRITE,PUT,/api/v2/brands/{brand_id},UpdateBrand,Brands
+support,WRITE,DELETE,/api/v2/brands/{brand_id},DeleteBrand,Brands
+support,READ,GET,/api/v2/brands/{brand_id}/agents,ListBrandAgentsByBrand,Brand Agents
+support,READ,GET,/api/v2/brands/{brand_id}/check_host_mapping,CheckHostMappingValidityForExistingBrand,Brands
+support,WRITE,PUT,/api/v2/brands/{brand_id}/logo,UpdateBrandLogo,Brands
+support,WRITE,DELETE,/api/v2/brands/{brand_id}/logo,DeleteBrandLogo,Brands
+support,READ,GET,/api/v2/brands/{brand_id}/user_migrations,ListBrandUserMigrations,Brand User Migrations
+support,WRITE,POST,/api/v2/brands/{brand_id}/user_migrations,CreateBrandUserMigration,Brand User Migrations
+support,READ,GET,/api/v2/brands/{brand_id}/user_migrations/{migration_id},ShowBrandUserMigration,Brand User Migrations
+support,WRITE,PUT,/api/v2/brands/{brand_id}/user_migrations/{migration_id},UpdateBrandUserMigration,Brand User Migrations
+support,READ,GET,/api/v2/brands/check_host_mapping,CheckHostMappingValidity,Brands
+support,READ,GET,/api/v2/channels/twitter/monitored_twitter_handles,ListMonitoredTwitterHandles,X Channel
+support,READ,GET,/api/v2/channels/twitter/monitored_twitter_handles/{monitored_twitter_handle_id},ShowMonitoredTwitterHandle,X Channel
+support,WRITE,POST,/api/v2/channels/twitter/tickets,CreateTicketFromTweet,X Channel
+support,READ,GET,/api/v2/channels/twitter/tickets/{comment_id}/statuses,GettingTwicketStatus,X Channel
+support,WRITE,POST,/api/v2/channels/voice/agents/{agent_id}/tickets/{ticket_id}/display,OpenTicketInAgentBrowser,Basics
+support,WRITE,POST,/api/v2/channels/voice/agents/{agent_id}/users/{user_id}/display,OpenUsersProfileInAgentBrowser,Basics
+support,WRITE,POST,/api/v2/channels/voice/tickets,CreateTicketOrVoicemailTicket,Basics
+support,READ,GET,/api/v2/channels/whatsapp_templates,ListWhatsappTemplates,WhatsApp Templates
+support,WRITE,PUT,/api/v2/channels/whatsapp_templates/{template_id}/toggle,ToggleWhatsappTemplate,WhatsApp Templates
+support,READ,GET,/api/v2/channels/whatsapp_templates/languages,ListWhatsappTemplateLanguages,WhatsApp Templates
+support,WRITE,PUT,/api/v2/channels/whatsapp_templates/toggle_many,ToggleManyWhatsappTemplates,WhatsApp Templates
+support,WRITE,PUT,/api/v2/chat_file_redactions/{ticket_id},RedactChatCommentAttachment,Ticket Comments
+support,WRITE,PUT,/api/v2/chat_redactions/{ticket_id},RedactChatComment,Ticket Comments
+support,WRITE,PUT,/api/v2/comment_redactions/{ticket_comment_id},RedactTicketCommentInAgentWorkspace,Ticket Comments
+support,READ,GET,/api/v2/countries.json,ListCountries,Countries
+support,READ,GET,/api/v2/countries/{id}.json,ShowCountry,Countries
+support,READ,GET,/api/v2/custom_objects,ListCustomObjects,Custom Objects
+support,WRITE,POST,/api/v2/custom_objects,CreateCustomObject,Custom Objects
+support,READ,GET,/api/v2/custom_objects/{custom_object_key},ShowCustomObject,Custom Objects
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key},UpdateCustomObject,Custom Objects
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key},DeleteCustomObject,Custom Objects
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/access_rules,ListAccessRules,Custom Object Permissions
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/access_rules,CreateAccessRule,Custom Object Permissions
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/access_rules/{id},ShowAccessRule,Custom Object Permissions
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/access_rules/{id},UpdateAccessRule,Custom Object Permissions
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/access_rules/{id},DeleteAccessRule,Custom Object Permissions
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/access_rules/definitions,ListAccessRuleDefinitions,Custom Object Permissions
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/fields,ListCustomObjectFields,Custom Object Fields
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/fields,CreateCustomObjectField,Custom Object Fields
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/fields/{custom_object_field_key_or_id},ShowCustomObjectField,Custom Object Fields
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/fields/{custom_object_field_key_or_id},UpdateCustomObjectField,Custom Object Fields
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/fields/{custom_object_field_key_or_id},DeleteCustomObjectField,Custom Object Fields
+support,WRITE,PUT,/api/v2/custom_objects/{custom_object_key}/fields/reorder,ReorderCustomObjectFields,Custom Object Fields
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/jobs,CustomObjectRecordBulkJobs,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/limits/field_limit,CustomObjectFieldsLimit,Custom Object Fields
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/permission_policies,ListPermissionPolicies,Custom Object Permissions
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/permission_policies/{id},ShowPermissionPolicy,Custom Object Permissions
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/permission_policies/{id},UpdatePermissionPolicy,Custom Object Permissions
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records,ListCustomObjectRecords,Custom Object Records
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/records,CreateCustomObjectRecord,Custom Object Records
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/records,UpsertCustomObjectRecordByExternalIdOrName,Custom Object Records
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/records,DeleteCustomObjectRecordByExternalIdOrName,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/{custom_object_record_id},ShowCustomObjectRecord,Custom Object Records
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/records/{custom_object_record_id},UpdateCustomObjectRecord,Custom Object Records
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/records/{custom_object_record_id},DeleteCustomObjectRecord,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/{record_id}/attachments,ListCustomObjectRecordAttachments,Custom Object Record Attachments
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/records/{record_id}/attachments,CreateCustomObjectRecordAttachment,Custom Object Record Attachments
+support,WRITE,PUT,/api/v2/custom_objects/{custom_object_key}/records/{record_id}/attachments/{id},UpdateCustomObjectRecordAttachment,Custom Object Record Attachments
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/records/{record_id}/attachments/{id},DeleteCustomObjectRecordAttachment,Custom Object Record Attachments
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/{record_id}/attachments/{id}/download,DownloadCustomObjectRecordAttachment,Custom Object Record Attachments
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/autocomplete,AutocompleteCustomObjectRecordSearch,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/count,CountCustomObjectRecords,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/search,SearchCustomObjectRecords,Custom Object Records
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/records/search,FilteredSearchCustomObjectRecords,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/records/show_by_unique_identifier,ShowCustomObjectRecordByUniqueIdentifier,Custom Object Records
+support,WRITE,PUT,/api/v2/custom_objects/{custom_object_key}/records/update_by_unique_identifier,UpdateCustomObjectRecordByUniqueIdentifierViaPut,Custom Object Records
+support,WRITE,PATCH,/api/v2/custom_objects/{custom_object_key}/records/update_by_unique_identifier,UpdateCustomObjectRecordByUniqueIdentifier,Custom Object Records
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/triggers,ListObjectTriggers,Object Triggers
+support,WRITE,POST,/api/v2/custom_objects/{custom_object_key}/triggers,CreateObjectTrigger,Object Triggers
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/triggers/{trigger_id},GetObjectTrigger,Object Triggers
+support,WRITE,PUT,/api/v2/custom_objects/{custom_object_key}/triggers/{trigger_id},UpdateObjectTrigger,Object Triggers
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/triggers/{trigger_id},DeleteObjectTrigger,Object Triggers
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/triggers/active,ListActiveObjectTriggers,Object Triggers
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/triggers/definitions,ListObjectTriggersDefinitions,Object Triggers
+support,WRITE,DELETE,/api/v2/custom_objects/{custom_object_key}/triggers/destroy_many,DeleteManyObjectTriggers,Object Triggers
+support,READ,GET,/api/v2/custom_objects/{custom_object_key}/triggers/search,SearchObjectTriggers,Object Triggers
+support,WRITE,PUT,/api/v2/custom_objects/{custom_object_key}/triggers/update_many,UpdateManyObjectTriggers,Object Triggers
+support,READ,GET,/api/v2/custom_objects/limits/object_limit,CustomObjectsLimit,Custom Objects
+support,READ,GET,/api/v2/custom_objects/limits/record_limit,CustomObjectRecordsLimit,Custom Object Records
+support,READ,GET,/api/v2/custom_roles,ListCustomRoles,Custom Roles
+support,WRITE,POST,/api/v2/custom_roles,CreateCustomRole,Custom Roles
+support,READ,GET,/api/v2/custom_roles/{custom_role_id},ShowCustomRoleById,Custom Roles
+support,WRITE,PUT,/api/v2/custom_roles/{custom_role_id},UpdateCustomRoleById,Custom Roles
+support,WRITE,DELETE,/api/v2/custom_roles/{custom_role_id},DeleteCustomRoleById,Custom Roles
+support,WRITE,PUT,/api/v2/custom_status/default,BulkUpdateDefaultCustomStatus,Custom Ticket Statuses
+support,READ,GET,/api/v2/custom_statuses,ListCustomStatuses,Custom Ticket Statuses
+support,WRITE,POST,/api/v2/custom_statuses,CreateCustomStatus,Custom Ticket Statuses
+support,READ,GET,/api/v2/custom_statuses/{custom_status_id},ShowCustomStatus,Custom Ticket Statuses
+support,WRITE,PUT,/api/v2/custom_statuses/{custom_status_id},UpdateCustomStatus,Custom Ticket Statuses
+support,WRITE,DELETE,/api/v2/custom_statuses/{custom_status_id},DeleteCustomStatus,Custom Ticket Statuses
+support,WRITE,POST,/api/v2/custom_statuses/{custom_status_id}/ticket_form_statuses,CreateTicketFormStatusesForCustomStatus,Custom Ticket Statuses
+support,READ,GET,/api/v2/custom_statuses/show_many,ShowManyCustomStatuses,Custom Ticket Statuses
+support,READ,GET,/api/v2/deleted_tickets,ListDeletedTickets,Tickets
+support,WRITE,DELETE,/api/v2/deleted_tickets/{ticket_id},DeleteTicketPermanently,Tickets
+support,WRITE,PUT,/api/v2/deleted_tickets/{ticket_id}/restore,RestoreDeletedTicket,Tickets
+support,WRITE,DELETE,/api/v2/deleted_tickets/destroy_many,BulkPermanentlyDeleteTickets,Tickets
+support,WRITE,PUT,/api/v2/deleted_tickets/restore_many,BulkRestoreDeletedTickets,Tickets
+support,READ,GET,/api/v2/deleted_users,ListDeletedUsers,Users
+support,READ,GET,/api/v2/deleted_users/{deleted_user_id},ShowDeletedUser,Users
+support,WRITE,DELETE,/api/v2/deleted_users/{deleted_user_id},PermanentlyDeleteUser,Users
+support,READ,GET,/api/v2/deleted_users/count,CountDeletedUsers,Users
+support,READ,GET,/api/v2/deletion_schedules,ListDeletionSchedules,Deletion Schedules
+support,WRITE,POST,/api/v2/deletion_schedules,CreateDeletionSchedule,Deletion Schedules
+support,READ,GET,/api/v2/deletion_schedules/{deletion_schedule_id},GetDeletionSchedule,Deletion Schedules
+support,WRITE,PUT,/api/v2/deletion_schedules/{deletion_schedule_id},UpdateDeletionSchedule,Deletion Schedules
+support,WRITE,DELETE,/api/v2/deletion_schedules/{deletion_schedule_id},DeleteDeletionSchedule,Deletion Schedules
+support,READ,GET,/api/v2/dynamic_content/items,ListDynamicContents,Dynamic Content
+support,WRITE,POST,/api/v2/dynamic_content/items,CreateDynamicContent,Dynamic Content
+support,READ,GET,/api/v2/dynamic_content/items/{dynamic_content_item_id},ShowDynamicContentItem,Dynamic Content
+support,WRITE,PUT,/api/v2/dynamic_content/items/{dynamic_content_item_id},UpdateDynamicContentItem,Dynamic Content
+support,WRITE,DELETE,/api/v2/dynamic_content/items/{dynamic_content_item_id},DeleteDynamicContentItem,Dynamic Content
+support,READ,GET,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants,DynamicContentListVariants,Dynamic Content Item Variants
+support,WRITE,POST,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants,CreateDynamicContentVariant,Dynamic Content Item Variants
+support,READ,GET,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants/{dynamic_content_variant_id},ShowDynamicContentVariant,Dynamic Content Item Variants
+support,WRITE,PUT,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants/{dynamic_content_variant_id},UpdateDynamicContentVariant,Dynamic Content Item Variants
+support,WRITE,DELETE,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants/{dynamic_content_variant_id},DeleteDynamicContentVariant,Dynamic Content Item Variants
+support,WRITE,POST,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants/create_many,CreateManyDynamicContentVariants,Dynamic Content Item Variants
+support,WRITE,PUT,/api/v2/dynamic_content/items/{dynamic_content_item_id}/variants/update_many,UpdateManyDynamicContentVariants,Dynamic Content Item Variants
+support,READ,GET,/api/v2/dynamic_content/items/show_many,ShowManyDynamicContents,Dynamic Content
+support,READ,GET,/api/v2/email_notifications,ListEmailNotifications,Email Notifications
+support,READ,GET,/api/v2/email_notifications/{notification_id},ShowEmailNotification,Email Notifications
+support,READ,GET,/api/v2/email_notifications/show_many,ShowManyEmailNotifications,Email Notifications
+support,READ,GET,/api/v2/end_users/{user_id}/identities,ListEndUserIdentities,User Identities
+support,WRITE,POST,/api/v2/end_users/{user_id}/identities,CreateEndUserIdentity,User Identities
+support,READ,GET,/api/v2/end_users/{user_id}/identities/{user_identity_id},ShowEndUserIdentity,User Identities
+support,WRITE,DELETE,/api/v2/end_users/{user_id}/identities/{user_identity_id},DeleteEndUserIdentity,User Identities
+support,WRITE,PUT,/api/v2/end_users/{user_id}/identities/{user_identity_id}/make_primary,MakeEndUserIdentityPrimary,User Identities
+support,WRITE,PUT,/api/v2/end_users/{user_id}/identities/{user_identity_id}/request_verification,RequestEndUserVerification,User Identities
+support,READ,GET,/api/v2/group_memberships,ListGroupMemberships,Group Memberships
+support,WRITE,POST,/api/v2/group_memberships,CreateGroupMembership,Group Memberships
+support,READ,GET,/api/v2/group_memberships/{group_membership_id},ShowGroupMembershipById,Group Memberships
+support,WRITE,DELETE,/api/v2/group_memberships/{group_membership_id},DeleteGroupMembership,Group Memberships
+support,READ,GET,/api/v2/group_memberships/assignable,ListAssignableGroupMemberships,Group Memberships
+support,WRITE,POST,/api/v2/group_memberships/create_many,GroupMembershipBulkCreate,Group Memberships
+support,WRITE,DELETE,/api/v2/group_memberships/destroy_many,GroupMembershipBulkDelete,Group Memberships
+support,READ,GET,/api/v2/group_slas/policies,ListGroupSLAPolicies,Group SLA Policies
+support,WRITE,POST,/api/v2/group_slas/policies,CreateGroupSLAPolicy,Group SLA Policies
+support,READ,GET,/api/v2/group_slas/policies/{group_sla_policy_id},ShowGroupSLAPolicy,Group SLA Policies
+support,WRITE,PUT,/api/v2/group_slas/policies/{group_sla_policy_id},UpdateGroupSLAPolicy,Group SLA Policies
+support,WRITE,DELETE,/api/v2/group_slas/policies/{group_sla_policy_id},DeleteGroupSLAPolicy,Group SLA Policies
+support,READ,GET,/api/v2/group_slas/policies/definitions,RetrieveGroupSLAPolicyFilterDefinitionItems,Group SLA Policies
+support,WRITE,PUT,/api/v2/group_slas/policies/reorder,ReorderGroupSLAPolicies,Group SLA Policies
+support,READ,GET,/api/v2/groups,ListGroups,Groups
+support,WRITE,POST,/api/v2/groups,CreateGroup,Groups
+support,READ,GET,/api/v2/groups/{group_id},ShowGroupById,Groups
+support,WRITE,PUT,/api/v2/groups/{group_id},UpdateGroup,Groups
+support,WRITE,DELETE,/api/v2/groups/{group_id},DeleteGroup,Groups
+support,READ,GET,/api/v2/groups/{group_id}/memberships,ListGroupMembershipsByGroup,Group Memberships
+support,READ,GET,/api/v2/groups/{group_id}/memberships/assignable,ListAssignableGroupMembershipsByGroup,Group Memberships
+support,READ,GET,/api/v2/groups/{group_id}/users,ListGroupUsers,Users
+support,READ,GET,/api/v2/groups/{group_id}/users/count,CountGroupUsers,Users
+support,READ,GET,/api/v2/groups/assignable,ListAssignableGroups,Groups
+support,READ,GET,/api/v2/groups/autocomplete,AutocompleteGroups,Groups
+support,READ,GET,/api/v2/groups/available_agents,ListAvailableAgents,Groups
+support,READ,GET,/api/v2/groups/count,CountGroups,Groups
+support,READ,GET,/api/v2/groups/default,ShowDefaultGroup,Groups
+support,WRITE,POST,/api/v2/imports/tickets,TicketImport,Ticket Import
+support,WRITE,POST,/api/v2/imports/tickets/create_many,TicketBulkImport,Ticket Import
+support,READ,GET,/api/v2/incremental/{incremental_resource}/sample,IncrementalSampleExport,Incremental Export
+support,READ,GET,/api/v2/incremental/custom_objects/{custom_object_key}/cursor,IncrementalCustomObjectRecordExportCursor,Custom Object Records
+support,READ,GET,/api/v2/incremental/organizations,IncrementalOrganizationExport,Incremental Export
+support,READ,GET,/api/v2/incremental/routing/attribute_values,IncrementalSkilBasedRoutingAttributeValuesExport,Incremental Skill Based Routing
+support,READ,GET,/api/v2/incremental/routing/attributes,IncrementalSkilBasedRoutingAttributesExport,Incremental Skill Based Routing
+support,READ,GET,/api/v2/incremental/routing/instance_values,IncrementalSkilBasedRoutingInstanceValuesExport,Incremental Skill Based Routing
+support,READ,GET,/api/v2/incremental/ticket_events,IncrementalTicketEvents,Incremental Export
+support,READ,GET,/api/v2/incremental/ticket_metric_events,ListTicketMetricEvents,Ticket Metric Events
+support,READ,GET,/api/v2/incremental/tickets,IncrementalTicketExportTime,Incremental Export
+support,READ,GET,/api/v2/incremental/tickets/cursor,IncrementalTicketExportCursor,Incremental Export
+support,READ,GET,/api/v2/incremental/users,IncrementalUserExportTime,Incremental Export
+support,READ,GET,/api/v2/incremental/users/cursor,IncrementalUserExportCursor,Incremental Export
+support,READ,GET,/api/v2/it_asset_management/asset_types,ListItamAssetTypes,ITAM Asset Types
+support,WRITE,POST,/api/v2/it_asset_management/asset_types,CreateItamAssetType,ITAM Asset Types
+support,READ,GET,/api/v2/it_asset_management/asset_types/{asset_type_id},ShowItamAssetType,ITAM Asset Types
+support,WRITE,PATCH,/api/v2/it_asset_management/asset_types/{asset_type_id},UpdateItamAssetType,ITAM Asset Types
+support,WRITE,DELETE,/api/v2/it_asset_management/asset_types/{asset_type_id},DeleteItamAssetType,ITAM Asset Types
+support,READ,GET,/api/v2/it_asset_management/asset_types/{asset_type_id}/fields,ListItamAssetTypeFields,ITAM Asset Fields
+support,READ,GET,/api/v2/it_asset_management/asset_types/{asset_type_id}/fields/{asset_type_field_id},ShowItamAssetTypeField,ITAM Asset Fields
+support,READ,GET,/api/v2/it_asset_management/assets,ListItamAssets,ITAM Assets
+support,WRITE,POST,/api/v2/it_asset_management/assets,CreateItamAsset,ITAM Assets
+support,READ,GET,/api/v2/it_asset_management/assets/{asset_id},ShowItamAsset,ITAM Assets
+support,WRITE,PATCH,/api/v2/it_asset_management/assets/{asset_id},UpdateItamAsset,ITAM Assets
+support,WRITE,DELETE,/api/v2/it_asset_management/assets/{asset_id},DeleteItamAsset,ITAM Assets
+support,WRITE,POST,/api/v2/it_asset_management/assets/jobs,ItamAssetBulkJobs,ITAM Assets
+support,READ,GET,/api/v2/it_asset_management/assets/search,SearchItamAssets,ITAM Assets
+support,WRITE,POST,/api/v2/it_asset_management/assets/search,FilteredSearchItamAssets,ITAM Assets
+support,READ,GET,/api/v2/it_asset_management/fields,ListItamFields,ITAM Asset Fields
+support,WRITE,POST,/api/v2/it_asset_management/fields,CreateItamField,ITAM Asset Fields
+support,READ,GET,/api/v2/it_asset_management/fields/{id},ShowItamField,ITAM Asset Fields
+support,WRITE,PATCH,/api/v2/it_asset_management/fields/{id},UpdateItamField,ITAM Asset Fields
+support,WRITE,DELETE,/api/v2/it_asset_management/fields/{id},DeleteItamField,ITAM Asset Fields
+support,READ,GET,/api/v2/it_asset_management/locations,ListItamLocations,ITAM Asset Locations
+support,WRITE,POST,/api/v2/it_asset_management/locations,CreateItamLocation,ITAM Asset Locations
+support,READ,GET,/api/v2/it_asset_management/locations/{location_id},ShowItamLocation,ITAM Asset Locations
+support,WRITE,PATCH,/api/v2/it_asset_management/locations/{location_id},UpdateItamLocation,ITAM Asset Locations
+support,WRITE,DELETE,/api/v2/it_asset_management/locations/{location_id},DeleteItamLocation,ITAM Asset Locations
+support,READ,GET,/api/v2/it_asset_management/statuses,ListItamStatuses,ITAM Asset Statuses
+support,WRITE,POST,/api/v2/it_asset_management/statuses,CreateItamStatus,ITAM Asset Statuses
+support,READ,GET,/api/v2/it_asset_management/statuses/{status_id},ShowItamStatus,ITAM Asset Statuses
+support,WRITE,PATCH,/api/v2/it_asset_management/statuses/{status_id},UpdateItamStatus,ITAM Asset Statuses
+support,WRITE,DELETE,/api/v2/it_asset_management/statuses/{status_id},DeleteItamStatus,ITAM Asset Statuses
+support,READ,GET,/api/v2/job_statuses,ListJobStatuses,Job Statuses
+support,READ,GET,/api/v2/job_statuses/{job_status_id},ShowJobStatus,Job Statuses
+support,READ,GET,/api/v2/job_statuses/show_many,ShowManyJobStatuses,Job Statuses
+support,READ,GET,/api/v2/locales,ListLocales,Locales
+support,READ,GET,/api/v2/locales/{locale_id},ShowLocaleById,Locales
+support,READ,GET,/api/v2/locales/agent,ListLocalesForAgent,Locales
+support,READ,GET,/api/v2/locales/current,ShowCurrentLocale,Locales
+support,READ,GET,/api/v2/locales/detect_best_locale,DetectBestLocale,Locales
+support,READ,GET,/api/v2/locales/public,ListAvailablePublicLocales,Locales
+support,READ,GET,/api/v2/macros,ListMacros,Macros
+support,WRITE,POST,/api/v2/macros,CreateMacro,Macros
+support,READ,GET,/api/v2/macros/{macro_id},ShowMacro,Macros
+support,WRITE,PUT,/api/v2/macros/{macro_id},UpdateMacro,Macros
+support,WRITE,DELETE,/api/v2/macros/{macro_id},DeleteMacro,Macros
+support,READ,GET,/api/v2/macros/{macro_id}/apply,ShowChangesToTicket,Macros
+support,READ,GET,/api/v2/macros/{macro_id}/attachments,ListMacroAttachments,Macros
+support,WRITE,POST,/api/v2/macros/{macro_id}/attachments,CreateAssociatedMacroAttachment,Macros
+support,READ,GET,/api/v2/macros/actions,ListMacrosActions,Macros
+support,READ,GET,/api/v2/macros/active,ListActiveMacros,Macros
+support,WRITE,POST,/api/v2/macros/attachments,CreateMacroAttachment,Macros
+support,READ,GET,/api/v2/macros/attachments/{attachment_id},ShowMacroAttachment,Macros
+support,READ,GET,/api/v2/macros/attachments/{attachment_id}/content,DownloadMacroAttachment,Macros
+support,READ,GET,/api/v2/macros/categories,ListMacroCategories,Macros
+support,READ,GET,/api/v2/macros/definitions,ListMacroActionDefinitions,Macros
+support,WRITE,DELETE,/api/v2/macros/destroy_many,DeleteManyMacros,Macros
+support,READ,GET,/api/v2/macros/groups,ListMacroGroups,Macros
+support,READ,GET,/api/v2/macros/most_used,ListMostUsedMacros,Macros
+support,READ,GET,/api/v2/macros/new,ShowDerivedMacro,Macros
+support,READ,GET,/api/v2/macros/search,SearchMacro,Macros
+support,WRITE,PUT,/api/v2/macros/update_many,UpdateManyMacros,Macros
+support,READ,GET,/api/v2/oauth/clients,ListOAuthClients,OAuth Clients
+support,WRITE,POST,/api/v2/oauth/clients,CreateOAuthClient,OAuth Clients
+support,READ,GET,/api/v2/oauth/clients/{oauth_client_id},ShowClient,OAuth Clients
+support,WRITE,PUT,/api/v2/oauth/clients/{oauth_client_id},UpdateClient,OAuth Clients
+support,WRITE,DELETE,/api/v2/oauth/clients/{oauth_client_id},DeleteClient,OAuth Clients
+support,WRITE,PUT,/api/v2/oauth/clients/{oauth_client_id}/generate_secret,ClientGenerateSecret,OAuth Clients
+support,READ,GET,/api/v2/oauth/global_clients,ListGlobalOAuthClients,Global Clients
+support,READ,GET,/api/v2/oauth/global_clients/{global_client_id},ShowGlobalClient,Global Clients
+support,READ,GET,/api/v2/oauth/global_clients/token_summary,GlobalOAuthClientsTokenSummary,Global Clients
+support,READ,GET,/api/v2/oauth/tokens,ListOAuthTokens,OAuth Tokens
+support,READ,GET,/api/v2/oauth/tokens/{oauth_token_id},ShowToken,OAuth Tokens
+support,WRITE,DELETE,/api/v2/oauth/tokens/{oauth_token_id},RevokeOAuthToken,OAuth Tokens
+support,READ,GET,/api/v2/oauth/tokens/current,ShowCurrentToken,OAuth Tokens
+support,WRITE,DELETE,/api/v2/oauth/tokens/current,RevokeCurrentOAuthToken,OAuth Tokens
+support,WRITE,POST,/api/v2/oauth/tokens/delete_many,RevokeManyOAuthTokens,OAuth Tokens
+support,READ,GET,/api/v2/organization_fields,ListOrganizationFields,Organization Fields
+support,WRITE,POST,/api/v2/organization_fields,CreateOrganizationField,Organization Fields
+support,READ,GET,/api/v2/organization_fields/{organization_field_id},ShowOrganizationField,Organization Fields
+support,WRITE,PUT,/api/v2/organization_fields/{organization_field_id},UpdateOrganizationField,Organization Fields
+support,WRITE,DELETE,/api/v2/organization_fields/{organization_field_id},DeleteOrganizationField,Organization Fields
+support,WRITE,PUT,/api/v2/organization_fields/reorder,ReorderOrganizationField,Organization Fields
+support,READ,GET,/api/v2/organization_memberships,ListOrganizationMemberships,Organization Memberships
+support,WRITE,POST,/api/v2/organization_memberships,CreateOrganizationMembership,Organization Memberships
+support,READ,GET,/api/v2/organization_memberships/{organization_membership_id},ShowOrganizationMembershipById,Organization Memberships
+support,WRITE,DELETE,/api/v2/organization_memberships/{organization_membership_id},DeleteOrganizationMembership,Organization Memberships
+support,WRITE,POST,/api/v2/organization_memberships/create_many,CreateManyOrganizationMemberships,Organization Memberships
+support,WRITE,DELETE,/api/v2/organization_memberships/destroy_many,DeleteManyOrganizationMemberships,Organization Memberships
+support,READ,GET,/api/v2/organization_merges/{organization_merge_id},ShowOrganizationMerge,Organizations
+support,READ,GET,/api/v2/organization_subscriptions,ListOrganizationSubscriptions,Organization Subscriptions
+support,WRITE,POST,/api/v2/organization_subscriptions,CreateOrganizationSubscription,Organization Subscriptions
+support,READ,GET,/api/v2/organization_subscriptions/{organization_subscription_id},ShowOrganizationSubscription,Organization Subscriptions
+support,WRITE,DELETE,/api/v2/organization_subscriptions/{organization_subscription_id},DeleteOrganizationSubscription,Organization Subscriptions
+support,READ,GET,/api/v2/organizations,ListOrganizations,Organizations
+support,WRITE,POST,/api/v2/organizations,CreateOrganization,Organizations
+support,READ,GET,/api/v2/organizations/{organization_id},ShowOrganization,Organizations
+support,WRITE,PUT,/api/v2/organizations/{organization_id},UpdateOrganization,Organizations
+support,WRITE,DELETE,/api/v2/organizations/{organization_id},DeleteOrganization,Organizations
+support,WRITE,POST,/api/v2/organizations/{organization_id}/merge,CreateOrganizationMerge,Organizations
+support,READ,GET,/api/v2/organizations/{organization_id}/merges,ListOrganizationMerges,Organizations
+support,READ,GET,/api/v2/organizations/{organization_id}/organization_memberships,ListOrganizationMembershipsByOrganization,Organization Memberships
+support,READ,GET,/api/v2/organizations/{organization_id}/related,OrganizationRelated,Organizations
+support,READ,GET,/api/v2/organizations/{organization_id}/requests,ListOrganizationRequests,Requests
+support,READ,GET,/api/v2/organizations/{organization_id}/subscriptions,ListOrganizationSubscriptionsByOrganization,Organization Subscriptions
+support,READ,GET,/api/v2/organizations/{organization_id}/tags,ListOrganizationTags,Tags
+support,WRITE,POST,/api/v2/organizations/{organization_id}/tags,SetOrganizationTags,Tags
+support,WRITE,PUT,/api/v2/organizations/{organization_id}/tags,AddOrganizationTags,Tags
+support,WRITE,DELETE,/api/v2/organizations/{organization_id}/tags,RemoveOrganizationTags,Tags
+support,READ,GET,/api/v2/organizations/{organization_id}/tickets,ListOrganizationTickets,Tickets
+support,READ,GET,/api/v2/organizations/{organization_id}/tickets/count,CountOrganizationTickets,Tickets
+support,READ,GET,/api/v2/organizations/{organization_id}/users,ListOrganizationUsers,Users
+support,READ,GET,/api/v2/organizations/{organization_id}/users/count,CountOrganizationUsers,Users
+support,READ,GET,/api/v2/organizations/autocomplete,AutocompleteOrganizations,Organizations
+support,READ,GET,/api/v2/organizations/count,CountOrganizations,Organizations
+support,WRITE,POST,/api/v2/organizations/create_many,CreateManyOrganizations,Organizations
+support,WRITE,POST,/api/v2/organizations/create_or_update,CreateOrUpdateOrganization,Organizations
+support,WRITE,DELETE,/api/v2/organizations/destroy_many,DeleteManyOrganizations,Organizations
+support,READ,GET,/api/v2/organizations/search,SearchOrganizations,Organizations
+support,READ,GET,/api/v2/organizations/show_many,ShowManyOrganizations,Organizations
+support,WRITE,PUT,/api/v2/organizations/update_many,UpdateManyOrganizations,Organizations
+support,READ,GET,/api/v2/problems,ListTicketProblems,Tickets
+support,WRITE,POST,/api/v2/problems/autocomplete,AutocompleteProblems,Tickets
+support,WRITE,POST,/api/v2/push_notification_devices/destroy_many,PushNotificationDevices,Push Notification Devices
+support,READ,GET,/api/v2/queues,ListQueues,Omnichannel Routing Queues
+support,WRITE,POST,/api/v2/queues,CreateQueue,Omnichannel Routing Queues
+support,READ,GET,/api/v2/queues/{queue_id},ShowQueueById,Omnichannel Routing Queues
+support,WRITE,PUT,/api/v2/queues/{queue_id},UpdateQueue,Omnichannel Routing Queues
+support,WRITE,DELETE,/api/v2/queues/{queue_id},DeleteQueue,Omnichannel Routing Queues
+support,READ,GET,/api/v2/queues/definitions,ListQueueDefinitions,Omnichannel Routing Queues
+support,WRITE,PATCH,/api/v2/queues/order,ReorderQueues,Omnichannel Routing Queues
+support,READ,GET,/api/v2/recipient_addresses,ListSupportAddresses,Support Addresses
+support,WRITE,POST,/api/v2/recipient_addresses,CreateSupportAddress,Support Addresses
+support,READ,GET,/api/v2/recipient_addresses/{support_address_id},ShowSupportAddress,Support Addresses
+support,WRITE,PUT,/api/v2/recipient_addresses/{support_address_id},UpdateSupportAddress,Support Addresses
+support,WRITE,DELETE,/api/v2/recipient_addresses/{support_address_id},DeleteRecipientAddress,Support Addresses
+support,WRITE,PUT,/api/v2/recipient_addresses/{support_address_id}/verify,VerifySupportAddressForwarding,Support Addresses
+support,READ,GET,/api/v2/relationships/definitions/{target_type},GetRelationshipFilterDefinitions,Lookup Relationships
+support,READ,GET,/api/v2/remote_authentications,ListRemoteAuthentications,Remote Authentications
+support,READ,GET,/api/v2/requests,ListRequests,Requests
+support,WRITE,POST,/api/v2/requests,CreateRequest,Requests
+support,READ,GET,/api/v2/requests/{request_id},ShowRequest,Requests
+support,WRITE,PUT,/api/v2/requests/{request_id},UpdateRequest,Requests
+support,READ,GET,/api/v2/requests/{request_id}/comments,ListComments,Requests
+support,READ,GET,/api/v2/requests/{request_id}/comments/{ticket_comment_id},ShowComment,Requests
+support,READ,GET,/api/v2/requests/ccd,ListCCDRequests,Requests
+support,READ,GET,/api/v2/requests/open,ListOpenRequests,Requests
+support,READ,GET,/api/v2/requests/search,SearchRequests,Requests
+support,READ,GET,/api/v2/requests/solved,ListSolvedRequests,Requests
+support,READ,GET,/api/v2/resource_collections,ListResourceCollections,Resource Collections
+support,WRITE,POST,/api/v2/resource_collections,CreateResourceCollection,Resource Collections
+support,READ,GET,/api/v2/resource_collections/{resource_collection_id},RetrieveResourceCollection,Resource Collections
+support,WRITE,PUT,/api/v2/resource_collections/{resource_collection_id},UpdateResourceCollection,Resource Collections
+support,WRITE,DELETE,/api/v2/resource_collections/{resource_collection_id},DeleteResourceCollection,Resource Collections
+support,READ,GET,/api/v2/routing/agents/{user_id}/instance_values,ListAgentAttributeValues,Skill Based Routing
+support,WRITE,POST,/api/v2/routing/agents/{user_id}/instance_values,SetAgentAttributeValues,Skill Based Routing
+support,READ,GET,/api/v2/routing/agents/instance_values,ListManyAgentsAttributeValues,Skill Based Routing
+support,WRITE,POST,/api/v2/routing/agents/instance_values/jobs,BulkSetAgentAttributeValuesJob,Skill Based Routing
+support,READ,GET,/api/v2/routing/attributes,ListAccountAttributes,Skill Based Routing
+support,WRITE,POST,/api/v2/routing/attributes,CreateAttribute,Skill Based Routing
+support,READ,GET,/api/v2/routing/attributes/{attribute_id},ShowAttribute,Skill Based Routing
+support,WRITE,PUT,/api/v2/routing/attributes/{attribute_id},UpdateAttribute,Skill Based Routing
+support,WRITE,DELETE,/api/v2/routing/attributes/{attribute_id},DeleteAttribute,Skill Based Routing
+support,READ,GET,/api/v2/routing/attributes/{attribute_id}/values,ListAttributeValues,Skill Based Routing
+support,WRITE,POST,/api/v2/routing/attributes/{attribute_id}/values,CreateAttributeValue,Skill Based Routing
+support,READ,GET,/api/v2/routing/attributes/{attribute_id}/values/{attribute_value_id},ShowAttributeValue,Skill Based Routing
+support,WRITE,PUT,/api/v2/routing/attributes/{attribute_id}/values/{attribute_value_id},UpdateAttributeValuePut,Skill Based Routing
+support,WRITE,PATCH,/api/v2/routing/attributes/{attribute_id}/values/{attribute_value_id},UpdateAttributeValue,Skill Based Routing
+support,WRITE,DELETE,/api/v2/routing/attributes/{attribute_id}/values/{attribute_value_id},DeleteAttributeValue,Skill Based Routing
+support,READ,GET,/api/v2/routing/attributes/definitions,ListRoutingAttributeDefinitions,Skill Based Routing
+support,READ,GET,/api/v2/routing/requirements/fulfilled,ListTicketsFullfilledByUser,Skill Based Routing
+support,READ,GET,/api/v2/routing/tickets/{ticket_id}/instance_values,ListTicketAttributeValues,Skill Based Routing
+support,WRITE,POST,/api/v2/routing/tickets/{ticket_id}/instance_values,SetTicketAttributeValues,Skill Based Routing
+support,READ,GET,/api/v2/satisfaction_ratings,ListSatisfactionRatings,Satisfaction Ratings
+support,READ,GET,/api/v2/satisfaction_ratings/{satisfaction_rating_id},ShowSatisfactionRating,Satisfaction Ratings
+support,READ,GET,/api/v2/satisfaction_ratings/count,CountSatisfactionRatings,Satisfaction Ratings
+support,READ,GET,/api/v2/satisfaction_reasons,ListSatisfactionRatingReasons,Satisfaction Reasons
+support,READ,GET,/api/v2/satisfaction_reasons/{satisfaction_reason_id},ShowSatisfactionRatings,Satisfaction Reasons
+support,READ,GET,/api/v2/saved_searches,ListSavedSearches,Saved Searches
+support,WRITE,POST,/api/v2/saved_searches,CreateSavedSearch,Saved Searches
+support,WRITE,PUT,/api/v2/saved_searches/{id},UpdateSavedSearch,Saved Searches
+support,WRITE,DELETE,/api/v2/saved_searches/{id},DeleteSavedSearch,Saved Searches
+support,READ,GET,/api/v2/search,ListSearchResults,Search
+support,READ,GET,/api/v2/search/count,CountSearchResults,Search
+support,READ,GET,/api/v2/search/export,ExportSearchResults,Search
+support,READ,GET,/api/v2/security_settings,ShowSecuritySettings,Security Settings
+support,READ,GET,/api/v2/sessions,ListSessions,Sessions
+support,READ,GET,/api/v2/sharing_agreements,ListSharingAgreements,Sharing Agreements
+support,WRITE,POST,/api/v2/sharing_agreements,CreateSharingAgreement,Sharing Agreements
+support,READ,GET,/api/v2/sharing_agreements/{sharing_agreement_id},ShowSharingAgreement,Sharing Agreements
+support,WRITE,PUT,/api/v2/sharing_agreements/{sharing_agreement_id},UpdateSharingAgreement,Sharing Agreements
+support,WRITE,DELETE,/api/v2/sharing_agreements/{sharing_agreement_id},DeleteSharingAgreement,Sharing Agreements
+support,READ,GET,/api/v2/skips,ListSkips,Ticket Skips
+support,WRITE,POST,/api/v2/skips,RecordNewSkip,Ticket Skips
+support,READ,GET,/api/v2/slas/policies,ListSLAPolicies,SLA Policies
+support,WRITE,POST,/api/v2/slas/policies,CreateSLAPolicy,SLA Policies
+support,READ,GET,/api/v2/slas/policies/{sla_policy_id},ShowSLAPolicy,SLA Policies
+support,WRITE,PUT,/api/v2/slas/policies/{sla_policy_id},UpdateSLAPolicy,SLA Policies
+support,WRITE,DELETE,/api/v2/slas/policies/{sla_policy_id},DeleteSLAPolicy,SLA Policies
+support,READ,GET,/api/v2/slas/policies/definitions,RetrieveSLAPolicyFilterDefinitionItems,SLA Policies
+support,WRITE,PUT,/api/v2/slas/policies/reorder,ReorderSLAPolicies,SLA Policies
+support,READ,GET,/api/v2/suspended_tickets,ListSuspendedTickets,Suspended Tickets
+support,READ,GET,/api/v2/suspended_tickets/{id},ShowSuspendedTickets,Suspended Tickets
+support,WRITE,DELETE,/api/v2/suspended_tickets/{id},DeleteSuspendedTicket,Suspended Tickets
+support,WRITE,PUT,/api/v2/suspended_tickets/{id}/recover,RecoverSuspendedTicket,Suspended Tickets
+support,WRITE,POST,/api/v2/suspended_tickets/attachments,SuspendedTicketsAttachments,Suspended Tickets
+support,WRITE,PUT,/api/v2/suspended_tickets/bulk_recover,BulkRecoverSuspendedTickets,Suspended Tickets
+support,WRITE,DELETE,/api/v2/suspended_tickets/destroy_many,DeleteSuspendedTickets,Suspended Tickets
+support,WRITE,POST,/api/v2/suspended_tickets/export,ExportSuspendedTickets,Suspended Tickets
+support,WRITE,PUT,/api/v2/suspended_tickets/recover_many,RecoverSuspendedTickets,Suspended Tickets
+support,READ,GET,/api/v2/tags,ListTags,Tags
+support,READ,GET,/api/v2/tags/count,CountTags,Tags
+support,READ,GET,/api/v2/target_failures,ListTargetFailures,Target Failures
+support,READ,GET,/api/v2/target_failures/{target_failure_id},ShowTargetFailure,Target Failures
+support,READ,GET,/api/v2/targets,ListTargets,Targets
+support,WRITE,POST,/api/v2/targets,CreateTarget,Targets
+support,READ,GET,/api/v2/targets/{target_id},ShowTarget,Targets
+support,WRITE,PUT,/api/v2/targets/{target_id},UpdateTarget,Targets
+support,WRITE,DELETE,/api/v2/targets/{target_id},DeleteTarget,Targets
+support,READ,GET,/api/v2/task_list_templates,ListTaskListTemplates,Task List Templates
+support,WRITE,POST,/api/v2/task_list_templates,CreateTaskListTemplate,Task List Templates
+support,READ,GET,/api/v2/task_list_templates/{task_list_template_id},ShowTaskListTemplate,Task List Templates
+support,WRITE,PUT,/api/v2/task_list_templates/{task_list_template_id},UpdateTaskListTemplate,Task List Templates
+support,WRITE,DELETE,/api/v2/task_list_templates/{task_list_template_id},DeleteTaskListTemplate,Task List Templates
+support,READ,GET,/api/v2/task_list_templates/{task_list_template_id}/tasks,GetTasksByTaskListTemplateId,Task List Templates
+support,READ,GET,/api/v2/task_lists/{task_list_id},ShowTaskListInstance,Task Lists
+support,WRITE,PUT,/api/v2/task_lists/{task_list_id},UpdateCustomTaskList,Task Lists
+support,WRITE,DELETE,/api/v2/task_lists/{task_list_id},DeleteTaskList,Task Lists
+support,READ,GET,/api/v2/task_lists/{task_list_id}/task_items,ListTaskItems,Task Lists
+support,WRITE,POST,/api/v2/task_lists/{task_list_id}/task_items,CreateCustomTaskItem,Task Lists
+support,READ,GET,/api/v2/task_lists/{task_list_id}/task_items/{task_item_id},ShowTaskItem,Task Lists
+support,WRITE,PUT,/api/v2/task_lists/{task_list_id}/task_items/{task_item_id},UpdateTaskItem,Task Lists
+support,WRITE,DELETE,/api/v2/task_lists/{task_list_id}/task_items/{task_item_id},DeleteCustomTaskItem,Task Lists
+support,READ,GET,/api/v2/ticket_audits,ListTicketAudits,Ticket Audits
+support,READ,GET,/api/v2/ticket_content_pins,ListTicketContentPins,Ticket Content Pins
+support,WRITE,POST,/api/v2/ticket_content_pins,CreateTicketContentPin,Ticket Content Pins
+support,WRITE,DELETE,/api/v2/ticket_content_pins/{content_pin_id},DeleteTicketContentPin,Ticket Content Pins
+support,READ,GET,/api/v2/ticket_fields,ListTicketFields,Ticket Fields
+support,WRITE,POST,/api/v2/ticket_fields,CreateTicketField,Ticket Fields
+support,READ,GET,/api/v2/ticket_fields/{ticket_field_id},ShowTicketfield,Ticket Fields
+support,WRITE,PUT,/api/v2/ticket_fields/{ticket_field_id},UpdateTicketField,Ticket Fields
+support,WRITE,DELETE,/api/v2/ticket_fields/{ticket_field_id},DeleteTicketField,Ticket Fields
+support,READ,GET,/api/v2/ticket_fields/{ticket_field_id}/options,ListTicketFieldOptions,Ticket Fields
+support,WRITE,POST,/api/v2/ticket_fields/{ticket_field_id}/options,CreateOrUpdateTicketFieldOption,Ticket Fields
+support,READ,GET,/api/v2/ticket_fields/{ticket_field_id}/options/{ticket_field_option_id},ShowTicketFieldOption,Ticket Fields
+support,WRITE,DELETE,/api/v2/ticket_fields/{ticket_field_id}/options/{ticket_field_option_id},DeleteTicketFieldOption,Ticket Fields
+support,READ,GET,/api/v2/ticket_fields/count,CountTicketFields,Ticket Fields
+support,WRITE,PUT,/api/v2/ticket_fields/reorder,ReorderTicketFields,Ticket Fields
+support,READ,GET,/api/v2/ticket_fields/show_many,ShowManyTicketFields,Ticket Fields
+support,READ,GET,/api/v2/ticket_form_statuses,ListTicketFormStatuses,Ticket Form Statuses
+support,READ,GET,/api/v2/ticket_form_statuses/show_many,ShowManyTicketFormStatuses,Ticket Form Statuses
+support,READ,GET,/api/v2/ticket_forms,ListTicketForms,Ticket Forms
+support,WRITE,POST,/api/v2/ticket_forms,CreateTicketForm,Ticket Forms
+support,READ,GET,/api/v2/ticket_forms/{ticket_form_id},ShowTicketForm,Ticket Forms
+support,WRITE,PUT,/api/v2/ticket_forms/{ticket_form_id},UpdateTicketForm,Ticket Forms
+support,WRITE,DELETE,/api/v2/ticket_forms/{ticket_form_id},DeleteTicketForm,Ticket Forms
+support,WRITE,POST,/api/v2/ticket_forms/{ticket_form_id}/clone,CloneTicketForm,Ticket Forms
+support,READ,GET,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses,TicketFormTicketFormStatuses,Ticket Forms
+support,WRITE,POST,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses,CreateTicketFormStatuses,Ticket Forms
+support,WRITE,PUT,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses,UpdateTicketFormStatuses,Ticket Forms
+support,WRITE,DELETE,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses,DeleteTicketFormStatuses,Ticket Form Statuses
+support,WRITE,PUT,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses/{ticket_form_status_id},UpdateTicketFormStatusById,Ticket Forms
+support,WRITE,DELETE,/api/v2/ticket_forms/{ticket_form_id}/ticket_form_statuses/{ticket_form_status_id},DeleteTicketFormStatusById,Ticket Form Statuses
+support,WRITE,PUT,/api/v2/ticket_forms/reorder,ReorderTicketForms,Ticket Forms
+support,READ,GET,/api/v2/ticket_forms/show_many,ShowManyTicketForms,Ticket Forms
+support,READ,GET,/api/v2/ticket_metrics,ListTicketMetrics,Ticket Metrics
+support,READ,GET,/api/v2/ticket_metrics/{ticket_metric_id},ShowTicketMetrics,Ticket Metrics
+support,READ,GET,/api/v2/tickets,ListTickets,Tickets
+support,WRITE,POST,/api/v2/tickets,CreateTicket,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id},ShowTicket,Tickets
+support,WRITE,PUT,/api/v2/tickets/{ticket_id},UpdateTicket,Tickets
+support,WRITE,DELETE,/api/v2/tickets/{ticket_id},DeleteTicket,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/audits,ListAuditsForTicket,Ticket Audits
+support,READ,GET,/api/v2/tickets/{ticket_id}/audits/{ticket_audit_id},ShowTicketAudit,Ticket Audits
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/audits/{ticket_audit_id}/make_private,MakeTicketCommentPrivateFromAudits,Ticket Audits
+support,READ,GET,/api/v2/tickets/{ticket_id}/audits/count,CountAuditsForTicket,Ticket Audits
+support,READ,GET,/api/v2/tickets/{ticket_id}/collaborators,ListTicketCollaborators,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/comments,ListTicketComments,Ticket Comments
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/comments/{comment_id}/attachments/{attachment_id}/redact,RedactCommentAttachment,Attachments
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/comments/{ticket_comment_id}/make_private,MakeTicketCommentPrivate,Ticket Comments
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/comments/{ticket_comment_id}/redact,RedactStringInComment,Ticket Comments
+support,READ,GET,/api/v2/tickets/{ticket_id}/comments/count,CountTicketComments,Ticket Comments
+support,READ,GET,/api/v2/tickets/{ticket_id}/conversation_log,ListConversationLogForTicket,Conversation Log
+support,READ,GET,/api/v2/tickets/{ticket_id}/email_ccs,ListTicketEmailCCs,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/followers,ListTicketFollowers,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/group_slas/policy_metrics,ListTicketGroupSlaPolicyMetrics,Group SLA Policies
+support,READ,GET,/api/v2/tickets/{ticket_id}/incidents,ListTicketIncidents,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/macros/{macro_id}/apply,ShowTicketAfterChanges,Macros
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/mark_as_spam,MarkTicketAsSpamAndSuspendRequester,Tickets
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/merge,MergeTicketsIntoTargetTicket,Tickets
+support,READ,GET,/api/v2/tickets/{ticket_id}/metric_events,ListTicketMetricEventsByTicket,Ticket Metric Events
+support,READ,GET,/api/v2/tickets/{ticket_id}/metrics,ShowTicketMetricsByTicket,Ticket Metrics
+support,READ,GET,/api/v2/tickets/{ticket_id}/parent_ticket_tasks,ListParentTicketReferences,Task Lists
+support,READ,GET,/api/v2/tickets/{ticket_id}/related,TicketRelatedInformation,Tickets
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/satisfaction_rating,CreateTicketSatisfactionRating,Satisfaction Ratings
+support,READ,GET,/api/v2/tickets/{ticket_id}/skips,ListTicketSkipsByTicket,Ticket Skips
+support,READ,GET,/api/v2/tickets/{ticket_id}/slas/policy_metrics,ListTicketSlaPolicyMetrics,SLA Policies
+support,READ,GET,/api/v2/tickets/{ticket_id}/tags,ListResourceTags,Tags
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/tags,SetTagsTicket,Tags
+support,WRITE,PUT,/api/v2/tickets/{ticket_id}/tags,PutTagsTicket,Tags
+support,WRITE,DELETE,/api/v2/tickets/{ticket_id}/tags,DeleteTagsTicket,Tags
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/task_items/{task_item_id}/subticket,CreateSubticket,Task Lists
+support,READ,GET,/api/v2/tickets/{ticket_id}/task_items/{task_item_id}/task_links,ListLinkedTicketsForTaskItem,Task Lists
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/task_items/{task_item_id}/task_links,LinkExistingTicket,Task Lists
+support,WRITE,DELETE,/api/v2/tickets/{ticket_id}/task_items/{task_item_id}/task_links/{task_object_link_id},UnlinkTicket,Task Lists
+support,READ,GET,/api/v2/tickets/{ticket_id}/task_lists,ShowTaskListsForTicket,Task Lists
+support,WRITE,POST,/api/v2/tickets/{ticket_id}/task_lists,CreateTaskList,Task Lists
+support,READ,GET,/api/v2/tickets/autocomplete,AutocompleteTickets,Tickets
+support,READ,GET,/api/v2/tickets/count,CountTickets,Tickets
+support,WRITE,POST,/api/v2/tickets/create_many,TicketsCreateMany,Tickets
+support,WRITE,DELETE,/api/v2/tickets/destroy_many,BulkDeleteTickets,Tickets
+support,WRITE,PUT,/api/v2/tickets/mark_many_as_spam,MarkManyTicketsAsSpam,Tickets
+support,READ,GET,/api/v2/tickets/messaging/conversations/{conversation_id}/ticket,ShowTicketByMessagingConversationId,Tickets
+support,READ,GET,/api/v2/tickets/recent,ListRecentTickets,Tickets
+support,READ,GET,/api/v2/tickets/show_many,TicketsShowMany,Tickets
+support,WRITE,PUT,/api/v2/tickets/update_many,TicketsUpdateMany,Tickets
+support,READ,GET,/api/v2/trigger_categories,ListTriggerCategories,Trigger Categories
+support,WRITE,POST,/api/v2/trigger_categories,CreateTriggerCategory,Trigger Categories
+support,READ,GET,/api/v2/trigger_categories/{trigger_category_id},ShowTriggerCategoryById,Trigger Categories
+support,WRITE,PATCH,/api/v2/trigger_categories/{trigger_category_id},UpdateTriggerCategory,Trigger Categories
+support,WRITE,DELETE,/api/v2/trigger_categories/{trigger_category_id},DeleteTriggerCategory,Trigger Categories
+support,WRITE,POST,/api/v2/trigger_categories/jobs,BatchOperateTriggerCategories,Trigger Categories
+support,READ,GET,/api/v2/triggers,ListTriggers,Triggers
+support,WRITE,POST,/api/v2/triggers,CreateTrigger,Triggers
+support,READ,GET,/api/v2/triggers/{trigger_id},GetTrigger,Triggers
+support,WRITE,PUT,/api/v2/triggers/{trigger_id},UpdateTrigger,Triggers
+support,WRITE,DELETE,/api/v2/triggers/{trigger_id},DeleteTrigger,Triggers
+support,READ,GET,/api/v2/triggers/{trigger_id}/revisions,ListTriggerRevisions,Triggers
+support,READ,GET,/api/v2/triggers/{trigger_id}/revisions/{trigger_revision_id},TriggerRevision,Triggers
+support,READ,GET,/api/v2/triggers/active,ListActiveTriggers,Triggers
+support,READ,GET,/api/v2/triggers/definitions,ListTriggerActionConditionDefinitions,Triggers
+support,WRITE,DELETE,/api/v2/triggers/destroy_many,DeleteManyTriggers,Triggers
+support,READ,GET,/api/v2/triggers/limits,ShowTriggerLimits,Triggers
+support,WRITE,PUT,/api/v2/triggers/reorder,ReorderTriggers,Triggers
+support,READ,GET,/api/v2/triggers/search,SearchTriggers,Triggers
+support,WRITE,PUT,/api/v2/triggers/update_many,UpdateManyTriggers,Triggers
+support,WRITE,POST,/api/v2/triggers/validate,ValidateTrigger,Triggers
+support,WRITE,POST,/api/v2/uploads,UploadFiles,Attachments
+support,WRITE,DELETE,/api/v2/uploads/{token},DeleteUpload,Attachments
+support,READ,GET,/api/v2/user_fields,ListUserFields,User Fields
+support,WRITE,POST,/api/v2/user_fields,CreateUserField,User Fields
+support,READ,GET,/api/v2/user_fields/{user_field_id},ShowUserField,User Fields
+support,WRITE,PUT,/api/v2/user_fields/{user_field_id},UpdateUserField,User Fields
+support,WRITE,DELETE,/api/v2/user_fields/{user_field_id},DeleteUserField,User Fields
+support,READ,GET,/api/v2/user_fields/{user_field_id}/options,ListUserFieldOptions,User Fields
+support,WRITE,POST,/api/v2/user_fields/{user_field_id}/options,CreateOrUpdateUserFieldOption,User Fields
+support,READ,GET,/api/v2/user_fields/{user_field_id}/options/{user_field_option_id},ShowUserFieldOption,User Fields
+support,WRITE,DELETE,/api/v2/user_fields/{user_field_id}/options/{user_field_option_id},DeleteUserFieldOption,User Fields
+support,WRITE,PUT,/api/v2/user_fields/reorder,ReorderUserField,User Fields
+support,READ,GET,/api/v2/user_fields/show_many,ShowManyUserFields,User Fields
+support,READ,GET,/api/v2/users,ListUsers,Users
+support,WRITE,POST,/api/v2/users,CreateUser,Users
+support,READ,GET,/api/v2/users/{user_id},ShowUser,Users
+support,WRITE,PUT,/api/v2/users/{user_id},UpdateUser,Users
+support,WRITE,DELETE,/api/v2/users/{user_id},DeleteUser,Users
+support,READ,GET,/api/v2/users/{user_id}/brand_agents,ListUserBrandAgents,Brand Agents
+support,READ,GET,/api/v2/users/{user_id}/brand_agents/{brand_agent_id},ShowUserBrandAgentById,Brand Agents
+support,READ,GET,/api/v2/users/{user_id}/compliance_deletion_statuses,ShowUserComplianceDeletionStatuses,Users
+support,READ,GET,/api/v2/users/{user_id}/entitlements/full,GetUserEntitlementsFull,Users
+support,READ,GET,/api/v2/users/{user_id}/group_memberships,ListUserGroupMemberships,Group Memberships
+support,WRITE,POST,/api/v2/users/{user_id}/group_memberships,CreateUserGroupMembership,Group Memberships
+support,READ,GET,/api/v2/users/{user_id}/group_memberships/{group_membership_id},ShowUserGroupMembershipById,Group Memberships
+support,WRITE,DELETE,/api/v2/users/{user_id}/group_memberships/{group_membership_id},DeleteUserGroupMembership,Group Memberships
+support,WRITE,PUT,/api/v2/users/{user_id}/group_memberships/{group_membership_id}/make_default,GroupMembershipSetDefault,Group Memberships
+support,READ,GET,/api/v2/users/{user_id}/groups,ListUserGroups,Groups
+support,READ,GET,/api/v2/users/{user_id}/groups/count,CountUserGroups,Groups
+support,READ,GET,/api/v2/users/{user_id}/identities,ListUserIdentities,User Identities
+support,WRITE,POST,/api/v2/users/{user_id}/identities,CreateUserIdentity,User Identities
+support,READ,GET,/api/v2/users/{user_id}/identities/{user_identity_id},ShowUserIdentity,User Identities
+support,WRITE,PUT,/api/v2/users/{user_id}/identities/{user_identity_id},UpdateUserIdentity,User Identities
+support,WRITE,DELETE,/api/v2/users/{user_id}/identities/{user_identity_id},DeleteUserIdentity,User Identities
+support,WRITE,PUT,/api/v2/users/{user_id}/identities/{user_identity_id}/make_primary,MakeUserIdentityPrimary,User Identities
+support,WRITE,PUT,/api/v2/users/{user_id}/identities/{user_identity_id}/request_verification,RequestUserVerification,User Identities
+support,WRITE,PUT,/api/v2/users/{user_id}/identities/{user_identity_id}/verify,VerifyUserIdentity,User Identities
+support,WRITE,PUT,/api/v2/users/{user_id}/merge,MergeEndUsers,Users
+support,READ,GET,/api/v2/users/{user_id}/organization_memberships,ListUserOrganizationMemberships,Organization Memberships
+support,WRITE,POST,/api/v2/users/{user_id}/organization_memberships,CreateUserOrganizationMembership,Organization Memberships
+support,READ,GET,/api/v2/users/{user_id}/organization_memberships/{organization_membership_id},ShowOrganizationMembershipByUserId,Organization Memberships
+support,WRITE,DELETE,/api/v2/users/{user_id}/organization_memberships/{organization_membership_id},DeleteUserOrganizationMembership,Organization Memberships
+support,WRITE,PUT,/api/v2/users/{user_id}/organization_memberships/{organization_membership_id}/make_default,SetOrganizationMembershipAsDefault,Organization Memberships
+support,READ,GET,/api/v2/users/{user_id}/organization_subscriptions,ListUserOrganizationSubscriptions,Organization Subscriptions
+support,READ,GET,/api/v2/users/{user_id}/organizations,ListUserOrganizations,Organizations
+support,WRITE,DELETE,/api/v2/users/{user_id}/organizations/{organization_id},UnassignOrganization,Organization Memberships
+support,WRITE,PUT,/api/v2/users/{user_id}/organizations/{organization_id}/make_default,SetOrganizationAsDefault,Organization Memberships
+support,READ,GET,/api/v2/users/{user_id}/organizations/count,CountUserOrganizations,Organizations
+support,WRITE,POST,/api/v2/users/{user_id}/password,SetUserPassword,User Passwords
+support,WRITE,PUT,/api/v2/users/{user_id}/password,ChangeOwnPassword,User Passwords
+support,READ,GET,/api/v2/users/{user_id}/password/requirements,GetUserPasswordRequirements,User Passwords
+support,READ,GET,/api/v2/users/{user_id}/related,ShowUserRelated,Users
+support,READ,GET,/api/v2/users/{user_id}/requests,ListUserRequests,Requests
+support,READ,GET,/api/v2/users/{user_id}/sessions,ListUserSessions,Sessions
+support,WRITE,DELETE,/api/v2/users/{user_id}/sessions,BulkDeleteSessionsByUserId,Sessions
+support,READ,GET,/api/v2/users/{user_id}/sessions/{session_id},ShowSession,Sessions
+support,WRITE,DELETE,/api/v2/users/{user_id}/sessions/{session_id},DeleteSession,Sessions
+support,READ,GET,/api/v2/users/{user_id}/skips,ListTicketSkips,Ticket Skips
+support,READ,GET,/api/v2/users/{user_id}/suspension,ShowUserSuspension,Users
+support,WRITE,POST,/api/v2/users/{user_id}/suspension,CreateUserSuspension,Users
+support,WRITE,PUT,/api/v2/users/{user_id}/suspension,UpdateUserSuspension,Users
+support,WRITE,DELETE,/api/v2/users/{user_id}/suspension,DeleteUserSuspension,Users
+support,READ,GET,/api/v2/users/{user_id}/tags,ListUserTags,Tags
+support,WRITE,POST,/api/v2/users/{user_id}/tags,SetUserTags,Tags
+support,WRITE,PUT,/api/v2/users/{user_id}/tags,PutUserTags,Tags
+support,WRITE,DELETE,/api/v2/users/{user_id}/tags,DeleteUserTags,Tags
+support,READ,GET,/api/v2/users/{user_id}/tickets/assigned,ListUserAssignedTickets,Tickets
+support,READ,GET,/api/v2/users/{user_id}/tickets/assigned/count,CountUserAssignedTickets,Tickets
+support,READ,GET,/api/v2/users/{user_id}/tickets/ccd,ListUserCCDTickets,Tickets
+support,READ,GET,/api/v2/users/{user_id}/tickets/ccd/count,CountUserCCDTickets,Tickets
+support,READ,GET,/api/v2/users/{user_id}/tickets/followed,ListUserFollowedTickets,Tickets
+support,READ,GET,/api/v2/users/{user_id}/tickets/requested,ListUserRequestedTickets,Tickets
+support,READ,GET,/api/v2/users/autocomplete,AutocompleteUsers,Users
+support,WRITE,POST,/api/v2/users/autocomplete,AutocompleteUsersPost,Users
+support,READ,GET,/api/v2/users/count,CountUsers,Users
+support,WRITE,POST,/api/v2/users/create_many,CreateManyUsers,Users
+support,WRITE,POST,/api/v2/users/create_or_update,CreateOrUpdateUser,Users
+support,WRITE,POST,/api/v2/users/create_or_update_many,CreateOrUpdateManyUsers,Users
+support,WRITE,DELETE,/api/v2/users/destroy_many,DestroyManyUsers,Users
+support,WRITE,POST,/api/v2/users/logout_many,LogoutManyUsers,Users
+support,READ,GET,/api/v2/users/me,ShowCurrentUser,Users
+support,WRITE,DELETE,/api/v2/users/me/logout,DeleteAuthenticatedSession,Sessions
+support,READ,GET,/api/v2/users/me/oauth/clients,ListCurrentUserOAuthClients,OAuth Clients
+support,READ,GET,/api/v2/users/me/session,ShowCurrentlyAuthenticatedSession,Sessions
+support,READ,GET,/api/v2/users/me/session/renew,RenewCurrentSession,Sessions
+support,READ,GET,/api/v2/users/me/settings,ShowCurrentUserSettings,Users
+support,WRITE,PUT,/api/v2/users/me/settings,UpdateCurrentUserSettings,Users
+support,WRITE,POST,/api/v2/users/request_create,RequestUserCreate,Users
+support,READ,GET,/api/v2/users/search,SearchUsers,Users
+support,READ,GET,/api/v2/users/show_many,ShowManyUsers,Users
+support,WRITE,PUT,/api/v2/users/update_many,UpdateManyUsers,Users
+support,READ,GET,/api/v2/views,ListViews,Views
+support,WRITE,POST,/api/v2/views,CreateView,Views
+support,READ,GET,/api/v2/views/{view_id},ShowView,Views
+support,WRITE,PUT,/api/v2/views/{view_id},UpdateView,Views
+support,WRITE,DELETE,/api/v2/views/{view_id},DeleteView,Views
+support,READ,GET,/api/v2/views/{view_id}/count,GetViewCount,Views
+support,READ,GET,/api/v2/views/{view_id}/execute,ExecuteView,Views
+support,READ,GET,/api/v2/views/{view_id}/export,ExportView,Views
+support,READ,GET,/api/v2/views/{view_id}/tickets,ListTicketsFromView,Views
+support,READ,GET,/api/v2/views/active,ListActiveViews,Views
+support,READ,GET,/api/v2/views/compact,ListCompactViews,Views
+support,READ,GET,/api/v2/views/count,CountViews,Views
+support,READ,GET,/api/v2/views/count_many,GetViewCounts,Views
+support,READ,GET,/api/v2/views/definitions,ListViewDefinitions,Views
+support,WRITE,DELETE,/api/v2/views/destroy_many,BulkDeleteViews,Views
+support,WRITE,POST,/api/v2/views/preview,PreviewViews,Views
+support,WRITE,POST,/api/v2/views/preview/count,PreviewCount,Views
+support,READ,GET,/api/v2/views/search,SearchViews,Views
+support,READ,GET,/api/v2/views/show_many,ListViewsById,Views
+support,WRITE,PUT,/api/v2/views/update_many,UpdateManyViews,Views
+support,READ,GET,/api/v2/workspaces,ListWorkspaces,Workspaces
+support,WRITE,POST,/api/v2/workspaces,CreateWorkspace,Workspaces
+support,READ,GET,/api/v2/workspaces/{workspace_id},ShowWorkspace,Workspaces
+support,WRITE,PUT,/api/v2/workspaces/{workspace_id},UpdateWorkspace,Workspaces
+support,WRITE,DELETE,/api/v2/workspaces/{workspace_id},DeleteWorkspace,Workspaces
+support,WRITE,DELETE,/api/v2/workspaces/destroy_many,DestroyManyWorkspaces,Workspaces
+support,WRITE,PUT,/api/v2/workspaces/reorder,ReorderWorkspaces,Workspaces
+support,WRITE,POST,/oauth/tokens,CreateTokenForGrantType,Grant Type Tokens
+helpCenter,READ,GET,/api/v2/community/posts,ListPosts,Posts
+helpCenter,WRITE,POST,/api/v2/community/posts,CreatePost,Posts
+helpCenter,READ,GET,/api/v2/community/posts/{post_id},ShowPost,Posts
+helpCenter,WRITE,PUT,/api/v2/community/posts/{post_id},UpdatePost,Posts
+helpCenter,WRITE,DELETE,/api/v2/community/posts/{post_id},DeletePost,Posts
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/comments,ListPostComments,Post Comments
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/comments,CreatePostComment,Post Comments
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/comments/{comment_id}/down,DownvotePostComment,Votes
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/comments/{comment_id}/up,UpvotePostComment,Votes
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/comments/{comment_id}/votes,ListPostCommentVotes,Votes
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/comments/{post_comment_id},ShowPostComment,Post Comments
+helpCenter,WRITE,PUT,/api/v2/community/posts/{post_id}/comments/{post_comment_id},UpdatePostComment,Post Comments
+helpCenter,WRITE,DELETE,/api/v2/community/posts/{post_id}/comments/{post_comment_id},DeletePostComment,Post Comments
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/down,DownvotePost,Votes
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/subscriptions,ListPostSubscriptions,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/subscriptions,CreatePostSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/subscriptions/{subscription_id},ShowPostSubscription,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/community/posts/{post_id}/subscriptions/{subscription_id},DeletePostSubscription,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/community/posts/{post_id}/up,UpvotePost,Votes
+helpCenter,READ,GET,/api/v2/community/posts/{post_id}/votes,ListPostVotes,Votes
+helpCenter,READ,GET,/api/v2/community/topics,ListTopics,Topics
+helpCenter,WRITE,POST,/api/v2/community/topics,CreateTopic,Topics
+helpCenter,READ,GET,/api/v2/community/topics/{topic_id},ShowTopic,Topics
+helpCenter,WRITE,PUT,/api/v2/community/topics/{topic_id},UpdateTopic,Topics
+helpCenter,WRITE,DELETE,/api/v2/community/topics/{topic_id},DeleteTopic,Topics
+helpCenter,READ,GET,/api/v2/community/topics/{topic_id}/posts,ListPostsByTopicNoLocale,Posts
+helpCenter,READ,GET,/api/v2/community/topics/{topic_id}/subscriptions,ListTopicSubscriptions,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/community/topics/{topic_id}/subscriptions,CreateTopicSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/community/topics/{topic_id}/subscriptions/{subscription_id},ShowTopicSubscription,Content Subscriptions
+helpCenter,WRITE,PUT,/api/v2/community/topics/{topic_id}/subscriptions/{subscription_id},UpdateTopicSubscription,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/community/topics/{topic_id}/subscriptions/{subscription_id},DeleteTopicSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/community/users/{user_id}/comments,ListPostCommentsByUserNoLocale,Post Comments
+helpCenter,READ,GET,/api/v2/community/users/{user_id}/posts,ListPostsByUserNoLocale,Posts
+helpCenter,READ,GET,/api/v2/guide/search,UnifiedSearch,Help Center Search
+helpCenter,WRITE,POST,/api/v2/guide/user_images,CreateUserImage,User Images
+helpCenter,WRITE,POST,/api/v2/guide/user_images/uploads,RequestUserImageUpload,User Images
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles,ListArticles,Articles
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id},ShowArticle,Articles
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/articles/{article_id},UpdateArticle,Articles
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/articles/{article_id},ArchiveArticle,Articles
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/attachments,ListArticleAttachmentsWithLocale,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/attachments/block,ListBlockArticleAttachmentsWithLocale,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/attachments/inline,ListInlineArticleAttachmentsWithLocale,Article Attachments
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/articles/{article_id}/bulk_attachments,BulkAttachmentsArticles,Articles
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/comments,ListArticleComments,Article Comments
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/articles/{article_id}/comments,CreateArticleComment,Article Comments
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/comments/{comment_id},ShowComment_2,Article Comments
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/articles/{article_id}/comments/{comment_id},UpdateComment,Article Comments
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/articles/{article_id}/comments/{comment_id},DeleteComment,Article Comments
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/comments/{comment_id}/votes,ListArticleCommentVotesWithLocale,Votes
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/labels,ListArticleLabels,Article Labels
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/articles/{article_id}/labels,CreateArticleLabel,Article Labels
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/articles/{article_id}/labels/{label_id},DeleteArticleLabel,Article Labels
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/articles/{article_id}/source_locale,UpdateArticleSourceLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/subscriptions,ListArticleSubscriptions,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/articles/{article_id}/subscriptions,CreateArticleSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/subscriptions/{subscription_id},ShowArticleSubscription,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/articles/{article_id}/subscriptions/{subscription_id},DeleteArticleSubscription,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/articles/{article_id}/up,CreateArticleUpVote,Votes
+helpCenter,READ,GET,/api/v2/help_center/{locale}/articles/{article_id}/votes,ListArticleVotesWithLocale,Votes
+helpCenter,READ,GET,/api/v2/help_center/{locale}/categories,ListCategories,Categories
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/categories,CreateCategory,Categories
+helpCenter,READ,GET,/api/v2/help_center/{locale}/categories/{category_id},ShowCategory,Categories
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/categories/{category_id},UpdateCategory,Categories
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/categories/{category_id},DeleteCategory,Categories
+helpCenter,READ,GET,/api/v2/help_center/{locale}/categories/{category_id}/articles,ListArticlesByCategoryWithLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/{locale}/categories/{category_id}/sections,ListSectionsByCategoryWithLocale,Sections
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/categories/{category_id}/sections,CreateSection,Sections
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/categories/{category_id}/source_locale,UpdateCategorySourceLocale,Categories
+helpCenter,READ,GET,/api/v2/help_center/{locale}/community/posts/{post_id}/comments/{post_comment_id},ShowPostCommentByLocale,Post Comments
+helpCenter,READ,GET,/api/v2/help_center/{locale}/sections,ListSections,Sections
+helpCenter,READ,GET,/api/v2/help_center/{locale}/sections/{section_id},ShowSection,Sections
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/sections/{section_id},UpdateSection,Sections
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/sections/{section_id},DeleteSection,Sections
+helpCenter,READ,GET,/api/v2/help_center/{locale}/sections/{section_id}/articles,ListArticlesBySectionWithLocale,Articles
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/sections/{section_id}/articles,CreateArticle,Articles
+helpCenter,WRITE,PUT,/api/v2/help_center/{locale}/sections/{section_id}/source_locale,UpdateSectionSourceLocale,Sections
+helpCenter,READ,GET,/api/v2/help_center/{locale}/sections/{section_id}/subscriptions,ListSectionSubscriptions,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/{locale}/sections/{section_id}/subscriptions,CreateSectionSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/{locale}/sections/{section_id}/subscriptions/{subscription_id},ShowSectionSubscription,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/help_center/{locale}/sections/{section_id}/subscriptions/{subscription_id},DeleteSectionSubscription,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/articles,ListArticlesNoLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id},ShowArticleNoLocale,Articles
+helpCenter,WRITE,PUT,/api/v2/help_center/articles/{article_id},UpdateArticleNoLocale,Articles
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/{article_id},ArchiveArticleNoLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/attachments,ListArticleAttachments,Article Attachments
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/attachments,CreateArticleAttachment,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/attachments/{article_attachment_id},ShowArticleAttachment,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/attachments/block,ListBlockArticleAttachments,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/attachments/inline,ListInlineArticleAttachments,Article Attachments
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/bulk_attachments,BulkAttachmentsArticlesNoLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/comments,ListArticleCommentsNoLocale,Article Comments
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/comments,CreateArticleCommentNoLocale,Article Comments
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/comments/{comment_id},ShowArticleCommentNoLocale,Article Comments
+helpCenter,WRITE,PUT,/api/v2/help_center/articles/{article_id}/comments/{comment_id},UpdateArticleCommentNoLocale,Article Comments
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/{article_id}/comments/{comment_id},DeleteArticleCommentNoLocale,Article Comments
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/comments/{comment_id}/down,DownvoteArticleCommentNoLocale,Votes
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/comments/{comment_id}/up,UpvoteArticleCommentNoLocale,Votes
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/comments/{comment_id}/votes,ListArticleCommentVotesNoLocale,Votes
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/down,DownvoteArticleNoLocale,Votes
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/labels,ListArticleLabelsNoLocale,Article Labels
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/labels,CreateArticleLabelNoLocale,Article Labels
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/{article_id}/labels/{label_id},DeleteArticleLabelNoLocale,Article Labels
+helpCenter,WRITE,PUT,/api/v2/help_center/articles/{article_id}/source_locale,UpdateArticleSourceLocaleNoLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/subscriptions,ListArticleSubscriptionsNoLocale,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/subscriptions,CreateArticleSubscriptionNoLocale,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/subscriptions/{subscription_id},ShowArticleSubscriptionNoLocale,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/{article_id}/subscriptions/{subscription_id},DeleteArticleSubscriptionNoLocale,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/translations,ListTranslations,Translations
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/translations,CreateTranslation,Translations
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/translations/{locale},ShowTranslation,Translations
+helpCenter,WRITE,PUT,/api/v2/help_center/articles/{article_id}/translations/{locale},UpdateTranslation,Translations
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/translations/missing,ListMissingTranslations,Translations
+helpCenter,WRITE,POST,/api/v2/help_center/articles/{article_id}/up,UpvoteArticleNoLocale,Votes
+helpCenter,READ,GET,/api/v2/help_center/articles/{article_id}/votes,ListArticleVotesNoLocale,Votes
+helpCenter,WRITE,POST,/api/v2/help_center/articles/attachments,CreateAttachment,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/articles/attachments/{article_attachment_id},ShowArticleAttachmentNoArticle,Article Attachments
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/attachments/{article_attachment_id},DeleteArticleAttachment,Article Attachments
+helpCenter,READ,GET,/api/v2/help_center/articles/embeddable_search,EmbeddableArticleSearch,Help Center Search
+helpCenter,READ,GET,/api/v2/help_center/articles/labels,ListAllArticleLabels,Article Labels
+helpCenter,READ,GET,/api/v2/help_center/articles/labels/{label_id},ShowLabel,Article Labels
+helpCenter,WRITE,DELETE,/api/v2/help_center/articles/labels/{label_id},DeleteLabel,Article Labels
+helpCenter,READ,GET,/api/v2/help_center/articles/search,ArticleSearch,Help Center Search
+helpCenter,READ,GET,/api/v2/help_center/categories,ListCategoriesNoLocale,Categories
+helpCenter,WRITE,POST,/api/v2/help_center/categories,CreateCategoryNoLocale,Categories
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id},ShowCategoryNoLocale,Categories
+helpCenter,WRITE,PUT,/api/v2/help_center/categories/{category_id},UpdateCategoryNoLocale,Categories
+helpCenter,WRITE,DELETE,/api/v2/help_center/categories/{category_id},DeleteCategoryNoLocale,Categories
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id}/articles,ListArticlesByCategoryNoLocale,Articles
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id}/sections,ListSectionsByCategory,Sections
+helpCenter,WRITE,POST,/api/v2/help_center/categories/{category_id}/sections,CreateSectionByCategory,Sections
+helpCenter,WRITE,PUT,/api/v2/help_center/categories/{category_id}/source_locale,UpdateCategorySourceLocaleNoLocale,Categories
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id}/translations,ListTranslationsByCategoryNoLocale,Translations
+helpCenter,WRITE,POST,/api/v2/help_center/categories/{category_id}/translations,CreateTranslationByCategoryNoLocale,Translations
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id}/translations/{locale},ShowTranslationByCategoryNoLocale,Translations
+helpCenter,WRITE,PUT,/api/v2/help_center/categories/{category_id}/translations/{locale},UpdateTranslationByCategoryNoLocale,Translations
+helpCenter,READ,GET,/api/v2/help_center/categories/{category_id}/translations/missing,ListMissingTranslationsByCategory,Translations
+helpCenter,READ,GET,/api/v2/help_center/community_posts/search,CommunityPostSearch,Help Center Search
+helpCenter,READ,GET,/api/v2/help_center/deflection/suggestions,ListDeflectionSuggestions,Help Center Search
+helpCenter,READ,GET,/api/v2/help_center/incremental/articles,ListArticlesIncremental,Articles
+helpCenter,READ,GET,/api/v2/help_center/locales,ListLocales_2,Translations
+helpCenter,READ,GET,/api/v2/help_center/sections,ListSectionsNoLocale,Sections
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id},ShowSectionNoLocale,Sections
+helpCenter,WRITE,PUT,/api/v2/help_center/sections/{section_id},UpdateSectionNoLocale,Sections
+helpCenter,WRITE,DELETE,/api/v2/help_center/sections/{section_id},DeleteSectionNoLocale,Sections
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/articles,ListArticlesBySectionNoLocale,Articles
+helpCenter,WRITE,POST,/api/v2/help_center/sections/{section_id}/articles,CreateArticleBySection,Articles
+helpCenter,WRITE,PUT,/api/v2/help_center/sections/{section_id}/source_locale,UpdateSectionSourceLocaleNoLocale,Sections
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/subscriptions,ListSectionSubscriptionsNoLocale,Content Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/sections/{section_id}/subscriptions,CreateSectionSubscriptionNoLocale,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/subscriptions/{subscription_id},ShowSectionSubscriptionNoLocale,Content Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/help_center/sections/{section_id}/subscriptions/{subscription_id},DeleteSectionSubscriptionNoLocale,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/translations,ListTranslationsBySectionNoLocale,Translations
+helpCenter,WRITE,POST,/api/v2/help_center/sections/{section_id}/translations,CreateTranslationBySectionNoLocale,Translations
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/translations/{locale},ShowTranslationBySectionNoLocale,Translations
+helpCenter,WRITE,PUT,/api/v2/help_center/sections/{section_id}/translations/{locale},UpdateTranslationBySectionNoLocale,Translations
+helpCenter,READ,GET,/api/v2/help_center/sections/{section_id}/translations/missing,ListMissingTranslationsBySection,Translations
+helpCenter,READ,GET,/api/v2/help_center/service_catalog/items,ListAllServiceCatalogItems,Service Catalog Items
+helpCenter,READ,GET,/api/v2/help_center/service_catalog/items/{item_id},ShowServiceCatalogItem,Service Catalog Items
+helpCenter,READ,GET,/api/v2/help_center/service_catalog/items/search,SearchServiceCatalogItems,Service Catalog Items
+helpCenter,READ,GET,/api/v2/help_center/sessions,ShowHelpCenterSession,Help Center Sessions
+helpCenter,WRITE,DELETE,/api/v2/help_center/translations/{translation_id},DeleteTranslation,Translations
+helpCenter,READ,GET,/api/v2/help_center/user_segments,ListUserSegments,User Segments
+helpCenter,WRITE,POST,/api/v2/help_center/user_segments,CreateUserSegment,User Segments
+helpCenter,READ,GET,/api/v2/help_center/user_segments/{user_segment_id},ShowUserSegment,User Segments
+helpCenter,WRITE,PUT,/api/v2/help_center/user_segments/{user_segment_id},UpdateUserSegment,User Segments
+helpCenter,WRITE,DELETE,/api/v2/help_center/user_segments/{user_segment_id},DeleteUserSegment,User Segments
+helpCenter,READ,GET,/api/v2/help_center/user_segments/{user_segment_id}/sections,ListUserSegmentSections,User Segments
+helpCenter,READ,GET,/api/v2/help_center/user_segments/{user_segment_id}/topics,ListUserSegmentTopics,User Segments
+helpCenter,READ,GET,/api/v2/help_center/user_segments/applicable,ListUserSegmentsApplicable,User Segments
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/articles,ListArticlesByUser,Articles
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/comments,ListArticleCommentsByUserNoLocale,Article Comments
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/subscriptions,ListContentSubscriptionsByUserId,Content Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/user_segments,ListUserSegmentsByUser,User Segments
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/user_subscriptions,ListUserSubscriptionsByUserId,User Subscriptions
+helpCenter,WRITE,POST,/api/v2/help_center/users/{user_id}/user_subscriptions,CreateUserSubscriptionByUserId,User Subscriptions
+helpCenter,WRITE,DELETE,/api/v2/help_center/users/{user_id}/user_subscriptions/{subscription_id},DeleteUserSubscriptionByUserId,User Subscriptions
+helpCenter,READ,GET,/api/v2/help_center/users/{user_id}/votes,ListUserVotes,Votes
+helpCenter,READ,GET,/api/v2/help_center/votes,ListVotesNoUser,Votes
+helpCenter,READ,GET,/api/v2/help_center/votes/{vote_id},ShowVote,Votes
+helpCenter,WRITE,DELETE,/api/v2/help_center/votes/{vote_id},DeleteVote,Votes
+helpCenter,READ,GET,/hc/api/v2/applications,ListApplications,Applications
+helpCenter,READ,GET,/hc/api/v2/applications/{application_id},GetApplication,Applications
+helpCenter,WRITE,POST,/hc/api/v2/applications/{application_id}/access_requests,CreateApplicationAccessRequest,Applications
+helpCenter,READ,GET,/hc/api/v2/applications/{application_id}/access_requests/latest,GetLatestApplicationAccessRequest,Applications
+helpCenter,READ,GET,/hc/api/v2/applications/{application_id}/access_status,GetApplicationAccessStatus,Applications
+helpCenter,READ,GET,/hc/api/v2/applications/filters,ListApplicationFilters,Applications
+helpCenter,READ,GET,/hc/api/v2/articles/featured,ListFeaturedArticles,Help Center Search
+conversations,WRITE,POST,/v2/apps,CreateApp,Apps
+conversations,READ,GET,/v2/apps,ListApps,Apps
+conversations,READ,GET,/v2/apps/{appId},GetApp,Apps
+conversations,WRITE,PATCH,/v2/apps/{appId},UpdateApp,Apps
+conversations,WRITE,DELETE,/v2/apps/{appId},DeleteApp,Apps
+conversations,WRITE,POST,/v2/apps/{appId}/keys,CreateAppKey,App Keys
+conversations,READ,GET,/v2/apps/{appId}/keys,ListAppKeys,App Keys
+conversations,READ,GET,/v2/apps/{appId}/keys/{keyId},GetAppKey,App Keys
+conversations,WRITE,DELETE,/v2/apps/{appId}/keys/{keyId},DeleteAppKey,App Keys
+conversations,WRITE,POST,/v2/apps/{appId}/attachments,UploadAttachment,Attachments
+conversations,WRITE,POST,/v2/apps/{appId}/attachments/remove,DeleteAttachment_2,Attachments
+conversations,WRITE,POST,/v2/apps/{appId}/conversations,CreateConversation,Conversations
+conversations,READ,GET,/v2/apps/{appId}/conversations,ListConversations,Conversations
+conversations,READ,GET,/v2/apps/{appId}/conversations/{conversationId},GetConversation,Conversations
+conversations,WRITE,PATCH,/v2/apps/{appId}/conversations/{conversationId},UpdateConversation,Conversations
+conversations,WRITE,DELETE,/v2/apps/{appId}/conversations/{conversationId},DeleteConversation,Conversations
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/join,JoinConversation,Participants
+conversations,READ,GET,/v2/apps/{appId}/conversations/{conversationId}/participants,ListParticipants,Participants
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/leave,LeaveConversation,Participants
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/messages,PostMessage,Messages
+conversations,READ,GET,/v2/apps/{appId}/conversations/{conversationId}/messages,ListMessages,Messages
+conversations,WRITE,DELETE,/v2/apps/{appId}/conversations/{conversationId}/messages,DeleteAllMessages,Messages
+conversations,WRITE,DELETE,/v2/apps/{appId}/conversations/{conversationId}/messages/{messageId},DeleteMessage,Messages
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/activity,PostActivity,Activities
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/passControl,PassControl,Switchboard Actions
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/releaseControl,ReleaseControl,Switchboard Actions
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/offerControl,OfferControl,Switchboard Actions
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/acceptControl,AcceptControl,Switchboard Actions
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/download,DownloadMessageRef,Conversations
+conversations,WRITE,POST,/v2/apps/{appId}/conversations/{conversationId}/conversionEvents,PostConversionEvents,Conversations
+conversations,WRITE,POST,/v2/apps/{appId}/integrations,CreateIntegration,Integrations
+conversations,READ,GET,/v2/apps/{appId}/integrations,ListIntegrations,Integrations
+conversations,READ,GET,/v2/apps/{appId}/integrations/{integrationId},GetIntegration,Integrations
+conversations,WRITE,PATCH,/v2/apps/{appId}/integrations/{integrationId},UpdateIntegration,Integrations
+conversations,WRITE,DELETE,/v2/apps/{appId}/integrations/{integrationId},DeleteIntegration,Integrations
+conversations,WRITE,POST,/v2/apps/{appId}/integrations/{integrationId}/keys,CreateCustomIntegrationKey,CustomIntegrationApiKeys
+conversations,READ,GET,/v2/apps/{appId}/integrations/{integrationId}/keys,ListCustomIntegrationKeys,CustomIntegrationApiKeys
+conversations,READ,GET,/v2/apps/{appId}/integrations/{integrationId}/keys/{keyId},GetCustomIntegrationKey,CustomIntegrationApiKeys
+conversations,WRITE,DELETE,/v2/apps/{appId}/integrations/{integrationId}/keys/{keyId},DeleteCustomIntegrationKey,CustomIntegrationApiKeys
+conversations,WRITE,POST,/v2/apps/{appId}/integrations/{integrationId}/webhooks,CreateWebhook,Webhooks
+conversations,READ,GET,/v2/apps/{appId}/integrations/{integrationId}/webhooks,ListWebhooks,Webhooks
+conversations,READ,GET,/v2/apps/{appId}/integrations/{integrationId}/webhooks/{webhookId},GetWebhook,Webhooks
+conversations,WRITE,PATCH,/v2/apps/{appId}/integrations/{integrationId}/webhooks/{webhookId},UpdateWebhook,Webhooks
+conversations,WRITE,DELETE,/v2/apps/{appId}/integrations/{integrationId}/webhooks/{webhookId},DeleteWebhook,Webhooks
+conversations,WRITE,POST,/v2/apps/{appId}/switchboards,CreateSwitchboard,Switchboards
+conversations,READ,GET,/v2/apps/{appId}/switchboards,ListSwitchboards,Switchboards
+conversations,WRITE,PATCH,/v2/apps/{appId}/switchboards/{switchboardId},UpdateSwitchboard,Switchboards
+conversations,WRITE,DELETE,/v2/apps/{appId}/switchboards/{switchboardId},DeleteSwitchboard,Switchboards
+conversations,WRITE,POST,/v2/apps/{appId}/switchboards/{switchboardId}/switchboardIntegrations,CreateSwitchboardIntegration,Switchboard Integrations
+conversations,READ,GET,/v2/apps/{appId}/switchboards/{switchboardId}/switchboardIntegrations,ListSwitchboardIntegrations,Switchboard Integrations
+conversations,WRITE,PATCH,/v2/apps/{appId}/switchboards/{switchboardId}/switchboardIntegrations/{switchboardIntegrationId},UpdateSwitchboardIntegration,Switchboard Integrations
+conversations,WRITE,DELETE,/v2/apps/{appId}/switchboards/{switchboardId}/switchboardIntegrations/{switchboardIntegrationId},DeleteSwitchboardIntegration,Switchboard Integrations
+conversations,WRITE,POST,/v2/apps/{appId}/users,CreateUser_2,Users
+conversations,READ,GET,/v2/apps/{appId}/users,ListUsers_2,Users
+conversations,READ,GET,/v2/apps/{appId}/users/{userIdOrExternalId},GetUser,Users
+conversations,WRITE,PATCH,/v2/apps/{appId}/users/{userIdOrExternalId},UpdateUser_2,Users
+conversations,WRITE,DELETE,/v2/apps/{appId}/users/{userIdOrExternalId},DeleteUser_2,Users
+conversations,WRITE,POST,/v2/apps/{appId}/users/{userIdOrExternalId}/clients,CreateClient,Clients
+conversations,READ,GET,/v2/apps/{appId}/users/{userIdOrExternalId}/clients,ListClients,Clients
+conversations,WRITE,DELETE,/v2/apps/{appId}/users/{userIdOrExternalId}/clients/{clientId},RemoveClient,Clients
+conversations,READ,GET,/v2/apps/{appId}/users/{userIdOrExternalId}/devices,ListDevices,Devices
+conversations,READ,GET,/v2/apps/{appId}/users/{userIdOrExternalId}/devices/{deviceId},GetDevice,Devices
+conversations,WRITE,DELETE,/v2/apps/{appId}/users/{userIdOrExternalId}/personalinformation,DeleteUserPersonalInformation,Users
+conversations,WRITE,POST,/v2/apps/{appId}/users/{zendeskId}/sync,SyncUser,Users
+conversations,READ,GET,/v2/tokenInfo,GetTokenInfo,OAuth Endpoints
+conversations,READ,GET,/oauth/authorize,Authorize,OAuth Endpoints
+conversations,WRITE,POST,/oauth/token,GetToken,OAuth Endpoints
+conversations,WRITE,DELETE,/oauth/authorization,RevokeAccess,OAuth Endpoints
+conversations,WRITE,POST,/oauth/authorization,EventWebhooks,Webhooks
